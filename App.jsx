@@ -211,7 +211,7 @@ return (
       >
         <div className="card-inner">
           <div className="card-front">
-            <img src="assets/back.png" alt="back" />
+            <img src="assets/back.PNG" alt="back" />
           </div>
           <div className="card-back">
             <img src={randomCard.src} alt={randomCard.name} />
