@@ -27,11 +27,11 @@ function Home({ setIsPlaying, theme }) {
   const [cpuMode, setCpuMode] = useState(false);
   const navigate = useNavigate();
   const location = useLocation();
-  const pikachuStart = new Audio('/assets/pikachu.mp3');
-  const startSound = new Audio('/assets/start.mp3');
-  const pikaPika = new Audio('/assets/pikapika.mp3');
-  const startSound2 = new Audio('/assets/start2.mp3');
-  const metal = new Audio('/assets/metal.mp3');
+  const pikachuStart = new Audio('assets/pikachu.mp3');
+  const startSound = new Audio('assets/start.mp3');
+  const pikaPika = new Audio('assets/pikapika.mp3');
+  const startSound2 = new Audio('assets/start2.mp3');
+  const metal = new Audio('assets/metal.mp3');
 
   const [randomCard, setRandomCard] = useState(null);
   const [flipped, setFlipped] = useState(false);
@@ -146,7 +146,7 @@ return (
     <div id="home">
       <br />
       <br />
-      <img src="/assets/pokegang.gif" alt="the gang" width="10%" />
+      <img src="assets/pokegang.gif" alt="the gang" width="10%" />
       <h1>Memoria</h1>
       <h2>Pokemon</h2>
       <p>Figuras de Combate</p>
@@ -198,7 +198,7 @@ return (
       </div>
       </div>)}
       <br />
-      <img src="/assets/pikachuyellow.gif" alt="pikapika" width="20%" style={{ marginTop: "40px", position: "relative", left: "15px" }} onClick={() => {
+      <img src="assets/pikachuyellow.gif" alt="pikapika" width="20%" style={{ marginTop: "40px", position: "relative", left: "15px" }} onClick={() => {
         const randomPika = Math.random() < 0.5 ? pikaPika : pikachuStart;
         randomPika.play();
       }} />
@@ -211,7 +211,7 @@ return (
       >
         <div className="card-inner">
           <div className="card-front">
-            <img src="/assets/back.png" alt="back" />
+            <img src="assets/back.png" alt="back" />
           </div>
           <div className="card-back">
             <img src={randomCard.src} alt={randomCard.name} />
@@ -263,7 +263,7 @@ function About({ theme }) {
       onMouseMove={handleMouseMove}
       onMouseLeave={handleMouseLeave}
       >
-       <img src="/assets/about1.jpg" alt="board game" width="500px" style={{ borderRadius: "10px" }} />
+       <img src="assets/about1.jpg" alt="board game" width="500px" style={{ borderRadius: "10px" }} />
       {zoom.show && (
       <div
         className="img-zoom-rect"
@@ -274,7 +274,7 @@ function About({ theme }) {
           width: "250px",
           height: "250px",
           border: "2px solid #eebb09",
-          backgroundImage: `url(/assets/about1.jpg)`,
+          backgroundImage: `url(assets/about1.jpg)`,
           backgroundRepeat: "no-repeat",
           backgroundSize: "1000px 1000px", // 2x zoom for 500px image
           backgroundPosition: `-${zoom.x * 2 - 125}px -${zoom.y * 2 - 125}px`,
@@ -295,7 +295,7 @@ function About({ theme }) {
       onMouseMove={handleMouseMove2}
       onMouseLeave={handleMouseLeave2}
       >
-       <img src="/assets/about2.jpg" alt="board game2" width="500px" style={{ borderRadius: "10px" }} />
+       <img src="assets/about2.jpg" alt="board game2" width="500px" style={{ borderRadius: "10px" }} />
           {zoom2.show && (
       <div
         className="img-zoom-rect"
@@ -306,7 +306,7 @@ function About({ theme }) {
           width: "250px",
           height: "250px",
           border: "2px solid #eebb09",
-          backgroundImage: `url(/assets/about2.jpg)`,
+          backgroundImage: `url(assets/about2.jpg)`,
           backgroundRepeat: "no-repeat",
           backgroundSize: "1000px 1000px", // 2x zoom for 500px image
           backgroundPosition: `-${zoom2.x * 2 - 125}px -${zoom2.y * 2 - 125}px`,
@@ -322,15 +322,15 @@ function About({ theme }) {
 }
 function App() {
 const musicTracks = [
-     { id: 0, title: "Pokemon Blue/Red - Route 24 & 25", src: "/assets/music/Route 24 & 25.mp3" },
-     { id: 1, title: "Pokemon Blue/Red - Route 11", src: "/assets/music/Route 11.mp3" },
-     { id: 2, title: "Pokemon Blue/Red - Route 4", src: "/assets/music/Route 4.mp3" },
-     { id: 3, title: "Pokemon Blue/Red - Pallet Town", src: "/assets/music/Pallet Town.mp3" },
-     { id: 4, title: "Pokemon Blue/Red - Pewter City", src: "/assets/music/Pewter City.mp3" },
-     { id: 5, title: "Pokemon Blue/Red - Ending", src: "/assets/music/Ending.mp3" },
-     { id: 6, title: "The Battle at the Summit! - Super Smash Bros. Ultimate OST", src: "/assets/music/The Battle at the Summit.mp3" },
-     { id: 7, title: "Pokémon Gold/Pokemon Silver Medley - Super Smash Bros. Melee", src: "/assets/music/Silver Medley.mp3" },
-     { id: 8, title: "Lumiose City (Pokemon X & Y) - Super Smash Bros. Ultimate Soundtrack", src: "/assets/music/Lumiose City.mp3" }
+     { id: 0, title: "Pokemon Blue/Red - Route 24 & 25", src: "assets/music/Route 24 & 25.mp3" },
+     { id: 1, title: "Pokemon Blue/Red - Route 11", src: "assets/music/Route 11.mp3" },
+     { id: 2, title: "Pokemon Blue/Red - Route 4", src: "assets/music/Route 4.mp3" },
+     { id: 3, title: "Pokemon Blue/Red - Pallet Town", src: "assets/music/Pallet Town.mp3" },
+     { id: 4, title: "Pokemon Blue/Red - Pewter City", src: "assets/music/Pewter City.mp3" },
+     { id: 5, title: "Pokemon Blue/Red - Ending", src: "assets/music/Ending.mp3" },
+     { id: 6, title: "The Battle at the Summit! - Super Smash Bros. Ultimate OST", src: "assets/music/The Battle at the Summit.mp3" },
+     { id: 7, title: "Pokémon Gold/Pokemon Silver Medley - Super Smash Bros. Melee", src: "assets/music/Silver Medley.mp3" },
+     { id: 8, title: "Lumiose City (Pokemon X & Y) - Super Smash Bros. Ultimate Soundtrack", src: "assets/music/Lumiose City.mp3" }
    ];
 const themes = ['theme-normal', 'theme-pikachu', 'theme-charmander', 'theme-bulbasaur', 'theme-squirtle', 'theme-mewtwo'];
 const randomSongIndex = Math.floor(Math.random() * musicTracks.length);
@@ -423,11 +423,11 @@ useEffect(() => {
     <>
     <BrowserRouter>
       <div className="music-player">
-        <button className="theme-button">{ theme === "theme-mewtwo" ? <img src="/assets/themesb.png" alt="themes" width={30} onClick={handleThemes} /> : <img src="/assets/themes.png" alt="themes" width={30} onClick={handleThemes} />}</button>
+        <button className="theme-button">{ theme === "theme-mewtwo" ? <img src="assets/themesb.png" alt="themes" width={30} onClick={handleThemes} /> : <img src="assets/themes.png" alt="themes" width={30} onClick={handleThemes} />}</button>
         <div className="music-controls" style={{ marginRight: "10px" }}>
-          <button className="music-button" onClick={handlePrev}>{ theme === "theme-mewtwo" ? <img src="/assets/prevb.png" alt="previous" /> : <img src="/assets/prev.png" alt="previous" />}</button>
-          <button className="music-button" onClick={handlePlayPause}>{ theme === "theme-mewtwo" ? <img src={isPlaying ? "/assets/pauseb.png" : "/assets/playb.png"} alt="play/pause" /> : <img src={isPlaying ? "/assets/pause.png" : "/assets/play.png"} alt="play/pause" />}</button>
-          <button className="music-button" onClick={handleNext}>{ theme === "theme-mewtwo" ? <img src="/assets/nextb.png" alt="next" /> : <img src="/assets/next.png" alt="next" />}</button>
+          <button className="music-button" onClick={handlePrev}>{ theme === "theme-mewtwo" ? <img src="assets/prevb.png" alt="previous" /> : <img src="assets/prev.png" alt="previous" />}</button>
+          <button className="music-button" onClick={handlePlayPause}>{ theme === "theme-mewtwo" ? <img src={isPlaying ? "assets/pauseb.png" : "assets/playb.png"} alt="play/pause" /> : <img src={isPlaying ? "assets/pause.png" : "assets/play.png"} alt="play/pause" />}</button>
+          <button className="music-button" onClick={handleNext}>{ theme === "theme-mewtwo" ? <img src="assets/nextb.png" alt="next" /> : <img src="assets/next.png" alt="next" />}</button>
           <div
             className="volume-control"
             onMouseEnter={() => setShowVolume(true)}
@@ -443,7 +443,7 @@ useEffect(() => {
                 if (audioRef.current) audioRef.current.volume = prevVolume;
               }
             }}>
-              { theme === "theme-mewtwo" ? <img src={audioRef.current && audioRef.current.volume > 0 ? "/assets/volumeb.png" : "/assets/mutedb.png"} alt="volume" /> : <img src={audioRef.current && audioRef.current.volume > 0 ? "/assets/volume.png" : "/assets/muted.png"} alt="volume" />}
+              { theme === "theme-mewtwo" ? <img src={audioRef.current && audioRef.current.volume > 0 ? "assets/volumeb.png" : "assets/mutedb.png"} alt="volume" /> : <img src={audioRef.current && audioRef.current.volume > 0 ? "assets/volume.png" : "assets/muted.png"} alt="volume" />}
             </button>
             {showVolume && (
               <input

@@ -59,11 +59,11 @@ const Battle = ({ id1, id2, theme, showTransition, setShowTransition, onClose, s
  const [animation2, setAnimation2] = useState("");
  const [status1, setStatus1] = useState("");
  const [status2, setStatus2] = useState("");
- const youWin = new Audio("/assets/youwin.mp3");
- const youLose = new Audio("/assets/lose.mp3");
- const select = new Audio("/assets/select.mp3");
- const superEffective = new Audio("/assets/supereffective.mp3");
- const runAway = new Audio("/assets/runaway.mp3");
+ const youWin = new Audio("assets/youwin.mp3");
+ const youLose = new Audio("assets/lose.mp3");
+ const select = new Audio("assets/select.mp3");
+ const superEffective = new Audio("assets/supereffective.mp3");
+ const runAway = new Audio("assets/runaway.mp3");
  const audio1Ref = useRef(null);
  const audio2Ref = useRef(null);
  const battleActiveRef = useRef(true);
@@ -520,8 +520,8 @@ const damageCalculation = async (move, player, enemy_move, enemy) => {
   const typeMove = move[1];
   const categoryMove = move[2];
   const playerMoves = [card1.mov1, card1.mov2, card1.mov3, card1.mov4];
-  const hitAudio = new Audio("/assets/hit.mp3");
-  const audioAttack = new Audio("/assets/sfx_attacks/" + move[0] + ".mp3");
+  const hitAudio = new Audio("assets/hit.mp3");
+  const audioAttack = new Audio("assets/sfx_attacks/" + move[0] + ".mp3");
   const atk1 = attack1;
   const def1 = defense1;
   const spa1 = specialAttack1;
@@ -551,7 +551,7 @@ const damageCalculation = async (move, player, enemy_move, enemy) => {
   let accuracyEnemyMove = randomEnemyMove[5];
   let typeEnemyMove = randomEnemyMove[1];
   let categoryEnemyMove = randomEnemyMove[2];
-  const audioEnemyAttack = new Audio("/assets/sfx_attacks/" + randomEnemyMove[0] + ".mp3");
+  const audioEnemyAttack = new Audio("assets/sfx_attacks/" + randomEnemyMove[0] + ".mp3");
   const atk2 = attack2;
   const def2 = defense2;
   const spa2 = specialAttack2;
@@ -909,7 +909,7 @@ useEffect(() => {
                 const pkmnId = pkmn[0].id;
                 return (
                   <div key={idx} className="pkmn-battled">
-                    {pairResults[idx] && <img src={pairResults[idx].winner === pkmn[0].name ? "/assets/wincheck.png" : "/assets/losecheck.png"} alt="status" className={pairResults[idx].winner === pkmn[0].name ? "win-icon-short" : "lose-icon-short"} />}
+                    {pairResults[idx] && <img src={pairResults[idx].winner === pkmn[0].name ? "assets/wincheck.png" : "assets/losecheck.png"} alt="status" className={pairResults[idx].winner === pkmn[0].name ? "win-icon-short" : "lose-icon-short"} />}
                       <img src={shinyFound1.includes(pkmnId) ? `assets/sprites/${pkmnId}_front_shiny.png` : `assets/sprites/${pkmnId}_front_default.png`} alt={pkmn[0].name} className="pkmn-img" style={{ width:"180px" }} />
                       <p>{getDisplayName(pkmn[0].name)}</p>
                     <br />
@@ -926,7 +926,7 @@ useEffect(() => {
                 const pkmnId2 = pkmn[0].id;
                 return (
                   <div key={idx} className="pkmn-battled">
-                    {pairResults[idx] && <img src={pairResults[idx].winner === pkmn[0].name ? "/assets/wincheck.png" : "/assets/losecheck.png"} alt="status" className={pairResults[idx].winner === pkmn[0].name ? "win-icon-short" : "lose-icon-short"} />}
+                    {pairResults[idx] && <img src={pairResults[idx].winner === pkmn[0].name ? "assets/wincheck.png" : "assets/losecheck.png"} alt="status" className={pairResults[idx].winner === pkmn[0].name ? "win-icon-short" : "lose-icon-short"} />}
                       <img src={shinyFound2.includes(pkmnId2) ? `assets/sprites/${pkmnId2}_front_shiny.png` : `assets/sprites/${pkmnId2}_front_default.png`} alt={pkmn[0].name} className="pkmn-img" style={{ width:"190px" }} />
                       <p>{getDisplayName(pkmn[0].name)}</p>
                     <br />

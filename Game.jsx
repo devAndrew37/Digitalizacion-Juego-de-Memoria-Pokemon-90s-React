@@ -11,11 +11,11 @@ const Game = ({ setIsPlaying, theme }) => {
  const location = useLocation();
  const mode = location.state?.mode || "cpu"; 
  const difficulty = location.state?.difficulty || 6;
- const match = new Audio("/assets/match.mp3");
- const youWin = new Audio("/assets/youwin.mp3");
- const youLose = new Audio("/assets/youlose.mp3");
- const mainMenu = new Audio("/assets/main_menu.mp3");
- const tie = new Audio("/assets/tie.mp3");
+ const match = new Audio("assets/match.mp3");
+ const youWin = new Audio("assets/youwin.mp3");
+ const youLose = new Audio("assets/youlose.mp3");
+ const mainMenu = new Audio("assets/main_menu.mp3");
+ const tie = new Audio("assets/tie.mp3");
  
 
 
@@ -37,14 +37,14 @@ const Game = ({ setIsPlaying, theme }) => {
   const [correctCpuFlag, setCorrectCpuFlag] = useState(false);
   const [pokemonDataFlag, setPokemonDataFlag] = useState(false);
   const [pickedIndex, setPickedIndex] = useState(0);
-  const [pokemonAnimation, setPokemonAnimation] = useState("/assets/pikapika.gif");
+  const [pokemonAnimation, setPokemonAnimation] = useState("assets/pikapika.gif");
   const [showPopup, setShowPopup] = useState(false);
   const [popupMessage, setPopupMessage] = useState("");
   const remainingCards = removed.filter(r => !r).length;
   const [score, setScore] = useState({ player1: 0, player2: 0 });
 
   const randomAnimation = () => {
-    const animations = ["/assets/charmander.gif", "/assets/pikapika.gif", "/assets/squirtle.gif", "/assets/squirtle2.gif", "/assets/bulbasaur.gif"];
+    const animations = ["assets/charmander.gif", "assets/pikapika.gif", "assets/squirtle.gif", "assets/squirtle2.gif", "assets/bulbasaur.gif"];
     setPokemonAnimation(animations[Math.floor(Math.random() * animations.length)]);
   };
   const shuffleCards = (array) => {
@@ -322,7 +322,7 @@ return (
               >
                 <div className="card-inner">
                   <div className="card-front">
-                    <img src="/assets/back.png" alt="back" />
+                    <img src="assets/back.png" alt="back" />
                   </div>
                   <div className="card-back">
                     <img src={card.src} alt={card.name} />

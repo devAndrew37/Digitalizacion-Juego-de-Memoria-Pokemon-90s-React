@@ -13,15 +13,15 @@ const Game = ({ setIsPlaying, theme }) => {
  const mode = location.state?.mode || "cpu"; 
  const difficulty = location.state?.difficulty || 6;
  const numberBattles = location.state?.numberBattles || 6;
- const match = new Audio("/assets/match.mp3");
- const youWin = new Audio("/assets/youwin.mp3");
- const youLose = new Audio("/assets/youlose.mp3");
- const mainMenu = new Audio("/assets/main_menu.mp3");
- const tie = new Audio("/assets/tie.mp3");
- const battle = useRef(new Audio("/assets/battlemusic.mp3"));
- const battleloop = useRef(new Audio("/assets/battleloop.mp3"));
- const battle2 = useRef(new Audio("/assets/battlemusic2.mp3"));
- const battleloop2 = useRef(new Audio("/assets/battleloop2.mp3"));
+ const match = new Audio("assets/match.mp3");
+ const youWin = new Audio("assets/youwin.mp3");
+ const youLose = new Audio("assets/youlose.mp3");
+ const mainMenu = new Audio("assets/main_menu.mp3");
+ const tie = new Audio("assets/tie.mp3");
+ const battle = useRef(new Audio("assets/battlemusic.mp3"));
+ const battleloop = useRef(new Audio("assets/battleloop.mp3"));
+ const battle2 = useRef(new Audio("assets/battlemusic2.mp3"));
+ const battleloop2 = useRef(new Audio("assets/battleloop2.mp3"));
 
 
   const player1Mode = mode == "cpu" ? "Player" : "Player 1";
@@ -42,7 +42,7 @@ const Game = ({ setIsPlaying, theme }) => {
   const [correctCpuFlag, setCorrectCpuFlag] = useState(false);
   const [pokemonDataFlag, setPokemonDataFlag] = useState(false);
   const [pickedIndex, setPickedIndex] = useState(0);
-  const [pokemonAnimation, setPokemonAnimation] = useState("/assets/pikapika.gif");
+  const [pokemonAnimation, setPokemonAnimation] = useState("assets/pikapika.gif");
   const [showPopup, setShowPopup] = useState(false);
   const [popupMessage, setPopupMessage] = useState("");
   const remainingCards = removed.filter(r => !r).length;
@@ -61,7 +61,7 @@ const Game = ({ setIsPlaying, theme }) => {
   const [score, setScore] = useState({ player1: 0, player2: 0 });
 
   const randomAnimation = () => {
-    const animations = ["/assets/charmander.gif", "/assets/pikapika.gif", "/assets/squirtle.gif", "/assets/squirtle2.gif", "/assets/bulbasaur.gif"];
+    const animations = ["assets/charmander.gif", "assets/pikapika.gif", "assets/squirtle.gif", "assets/squirtle2.gif", "assets/bulbasaur.gif"];
     setPokemonAnimation(animations[Math.floor(Math.random() * animations.length)]);
   };
   const shuffleCards = (array) => {
@@ -399,7 +399,7 @@ return (
             const cardIndex = cards.findIndex(card => card.id === pair[0].id);
             showPokemonCard(cardIndex);
           }}>
-            {pairResults[idx] && <img src={pairResults[idx].winner === pair[0].name ? "/assets/wincheck.png" : "/assets/losecheck.png"} alt="status" className={pairResults[idx].winner === pair[0].name ? "win-icon" : "lose-icon"} />}
+            {pairResults[idx] && <img src={pairResults[idx].winner === pair[0].name ? "assets/wincheck.png" : "assets/losecheck.png"} alt="status" className={pairResults[idx].winner === pair[0].name ? "win-icon" : "lose-icon"} />}
             <img src={pair[0].src} alt={pair[0].name} className="card-img" />
             <img src={pair[1].src} alt={pair[1].name} className="card-img overlap" />
           </div>
@@ -425,7 +425,7 @@ return (
               >
                 <div className="card-inner">
                   <div className="card-front">
-                    <img src="/assets/back.png" alt="back" />
+                    <img src="assets/back.png" alt="back" />
                   </div>
                   <div className="card-back">
                     <img src={card.src} alt={card.name} />
@@ -452,7 +452,7 @@ return (
             const cardIndex = cards.findIndex(card => card.id === pair[0].id);
             showPokemonCard(cardIndex);
           }}>
-            {pairResults[idx] && <img src={pairResults[idx].winner === pair[0].name ? "/assets/wincheck.png" : "/assets/losecheck.png"} alt="status" className={pairResults[idx].winner === pair[0].name ? "win-icon" : "lose-icon"} />}
+            {pairResults[idx] && <img src={pairResults[idx].winner === pair[0].name ? "assets/wincheck.png" : "assets/losecheck.png"} alt="status" className={pairResults[idx].winner === pair[0].name ? "win-icon" : "lose-icon"} />}
             <img src={pair[0].src} alt={pair[0].name} className="card-img" />
             <img src={pair[1].src} alt={pair[1].name} className="card-img overlap" />
           </div>
