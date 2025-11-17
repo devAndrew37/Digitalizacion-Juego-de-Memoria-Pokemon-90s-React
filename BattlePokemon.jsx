@@ -55,6 +55,7 @@ const Battle = ({ id1, id2, theme, showTransition, setShowTransition, onClose, s
  const [continueBattle, setContinueBattle] = useState(false);
  const [bothAttacksFlag, setBothAttacksFlag] = useState(false);
  const [showAllPokemon, setShowAllPokemon] = useState(false);
+ const [pokemonDown, setPokemonDown] = useState(false);
  const [animation1, setAnimation1] = useState("");
  const [animation2, setAnimation2] = useState("");
  const [status1, setStatus1] = useState("");
@@ -184,7 +185,7 @@ const criticalHit = (speed) => {
   }
 };
 
-const checkIfAttackLeftStatus = (target, move) => {
+const checkIfAttackLeftStatus = (target, move) => {    
 if (target === pokemon1) {
   if (move[0] === "Sludge" || move[0] === "Poison Sting") {
     if (Math.random() < 0.3 && status1 !== "PSN") {
@@ -482,6 +483,7 @@ if (status1 === "SLP") {
 
 const finishFight = (winner) => {      // determina el ganador y cierra la ventana de batalla
   setBattleMusic(false);
+  setPokemonDown(false);
   if (winner === id1) {          // gana el jugador
     youWin.play();
     setBattleMessage(`${getDisplayName(pokemon1.name)} wins the battle!`);
@@ -814,7 +816,8 @@ const damageCalculation = async (move, player, enemy_move, enemy) => {
 }; 
 
 useEffect(() => {
-  if (hp1 === 0 && pokemon1 && !bothAttacksFlag) {
+  if (hp1 === 0 && pokemon1 && !bothAttacksFlag && !pokemonDown) {
+    setPokemonDown(true);
     setBattleMessage(`${getDisplayName(pokemon1.name)} fainted!`);
     setAnimation1("death-animation-left");
     battleActiveRef.current = false;
@@ -822,7 +825,8 @@ useEffect(() => {
     setTimeout(() => {
       finishFight(id2);     
     }, 1000);
-  } else if (hp2 === 0 && pokemon2 && !bothAttacksFlag) {
+  } else if (hp2 === 0 && pokemon2 && !bothAttacksFlag && !pokemonDown) {
+    setPokemonDown(true);
     setBattleMessage(`${getDisplayName(pokemon2.name)} fainted!`);
     setAnimation2("death-animation-right");
     battleActiveRef.current = false;
