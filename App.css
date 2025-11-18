@@ -108,7 +108,7 @@ nav a {
   }
   .card-home-wrapper {
     position: sticky;
-    left: 240px;
+    left: 170px;
     top: 700px;
     margin-right: 50px;
     margin-bottom: 40px;
@@ -639,5 +639,6 @@ button.theme-mewtwo:hover {
 p.theme-mewtwo{
   color: #ffffff;
 }
+
 
 /*themes*/
