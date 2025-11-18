@@ -256,14 +256,14 @@ function About({ theme }) {
     <div className="about-container">
       <h2 style={{ justifyContent: "center" }} className="header">About</h2>
       <div className="about1">
-      <p className={`${theme}`} align="justify" style={{ width: "130%" }}>I started this project as a way to practice React and improve my coding skills.
+      <p className={`${theme} textblock`}>I started this project as a way to practice React and improve my coding skills.
        I got this Pokemon memory board game when I was around 8 years old and I wanted to bring it back to life to the digital era in a more modern and fun way.</p>
       </div>
       <div className="about-img-wrapper about2" 
       onMouseMove={handleMouseMove}
       onMouseLeave={handleMouseLeave}
       >
-       <img src="assets/about1.jpg" alt="board game" width="500px" style={{ borderRadius: "10px" }} />
+       <img src="assets/about1.jpg" alt="board game" className='imageblock' style={{ borderRadius: "10px" }} />
       {zoom.show && (
       <div
         className="img-zoom-rect"
@@ -285,17 +285,17 @@ function About({ theme }) {
       )}
       </div>
       <div className="about3">
-      <p className={`${theme}`} align="justify" style={{ width: "130%" }}>This board game was made at the start of the Pokemon era, so translated names (in this case Spanish) were not that polished. But that's the beauty of it, to keep it as authentic as it was when it came out.
+      <p className={`${theme} textblock`}>This board game was made at the start of the Pokemon era, so translated names (in this case Spanish) were not that polished. But that's the beauty of it, to keep it as authentic as it was when it came out.
         When you match a pair of cards, I added a call to an API server to retrieve data of the matched Pokemon and display it as a Pokedex with the original Game Boy games sounds for each Pokemon. </p> 
       <br />
       <br />
-      <p className={`${theme}`} align="justify">This project was pure nostalgia from the past!</p>
+      <p className={`${theme} textblock`}>This project was pure nostalgia from the past!</p>
       </div>
       <div className="about-img-wrapper about4" 
       onMouseMove={handleMouseMove2}
       onMouseLeave={handleMouseLeave2}
       >
-       <img src="assets/about2.jpg" alt="board game2" width="500px" style={{ borderRadius: "10px" }} />
+       <img src="assets/about2.jpg" alt="board game2" className='imageblock' style={{ borderRadius: "10px" }} />
           {zoom2.show && (
       <div
         className="img-zoom-rect"
