@@ -15,6 +15,7 @@ const HeadTails = ({ setTurn, setStartFlag, theme, setIsPlaying }) => {
  const [themeTails, setThemeTails] = useState("");   // theme-selected, theme-correct, theme-failed
 
  const handleHeadOrTails = (selected) => {
+  if (startAnimation || resultFlag) return; // Prevent multiple clicks during animation
     setStartAnimation(true);
     coinFlip.play();
     setTimeout(() => {
@@ -69,27 +70,29 @@ useEffect(() => {
     <>
       <div className="popup-overlay">
         <div className={`popup-coin ${theme}`}>
-          <h2>Choose head or tails to see who starts first!</h2>
-          <div style={{ display: "flex", gap: "40rem", justifyContent: "center", position: "relative", top: "20px" }}>
+          <h2 className='headtailstitle'>Choose head or tails to see who starts first!</h2>
+          <div className="coin-options">
           <div className={`coin-option ${themeHead}`} onClick={() => { 
+            if (startAnimation || resultFlag) return;
             handleHeadOrTails("head")
             setThemeHead("theme-selected");
             }}>
-          <img src="assets/head.png" alt="Head" style={{ width: "100px" }} />
+          <img src="assets/head.png" alt="Head" className='imgcoin' />
           <p>Head</p>
           </div>
           <div className={`coin-option ${themeTails}`} onClick={() => { 
+            if (startAnimation || resultFlag) return;
             handleHeadOrTails("tails")
             setThemeTails("theme-selected");}}>
-          <img src="assets/tails.png" alt="Tails" style={{ width: "100px" }} />
+          <img src="assets/tails.png" alt="Tails" className='imgcoin' />
           <p>Tails</p>
           </div>
           </div>
-          <div style={{ marginTop: "1rem", textAlign: "center" }}>
-          {resultFlag && !startAnimation && <img src={`assets/${randomOutcome}.png`} alt={randomOutcome} style={{ width: "100px"}} />}
-          {!startAnimation && !resultFlag && <h3 style={{ position: "relative", top: "80px" }}>{heading}</h3>}
+          <div className="coin-result">
+          {resultFlag && !startAnimation && <img src={`assets/${randomOutcome}.png`} alt={randomOutcome} className='imgcoin' />}
+          {!startAnimation && !resultFlag && <h3 style={{ position: "relative", top: "120px" }}>{heading}</h3>}
           {!startAnimation && resultFlag && <h3 style={{ position: "relative", top: "40px" }}>{heading}</h3>}
-          {startAnimation && <img src={`assets/flip.gif`} alt="coin flip" style={{ width: "300px" }} />}
+          {startAnimation && <img src={`assets/flip.gif`} alt="coin flip" className='gifcoin' />}
           </div>
         </div>
       </div>
