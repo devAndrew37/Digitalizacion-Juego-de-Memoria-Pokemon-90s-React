@@ -108,7 +108,7 @@ nav a {
   }
   .card-home-wrapper {
     position: sticky;
-    left: 170px;
+    left: 160px;
     top: 700px;
     margin-right: 50px;
     margin-bottom: 40px;
@@ -642,3 +642,4 @@ p.theme-mewtwo{
 
 
 /*themes*/
+
