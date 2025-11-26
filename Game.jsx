@@ -337,7 +337,7 @@ return (
         ))}
       </div>
       <div className="turn-indicator right">
-        <img src={pokemonAnimation} alt="pokemon!" width="100px" />
+        <img src={pokemonAnimation} alt="pokemon!" className="pokemon-icon" />
       </div>
       </div>
       <div className="first-player-container">

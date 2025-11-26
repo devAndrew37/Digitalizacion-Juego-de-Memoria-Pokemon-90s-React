@@ -901,12 +901,12 @@ useEffect(() => {
     <>
     {showAllPokemon && (
       <div className="pokemon-overlay">
-        <div className={`popup-pokemon ${theme}`} style={{ width: "1800px", height: "1000px", overflowY: "auto", position: "relative" }}>
-          <button onClick={onClosePokemonWindow} style={{ float: "right", position: "relative", left: "30px", top: "20px", backgroundColor: "transparent" }}>✖</button>
+        <div className={`popup-pokemon-2 ${theme}`}>
+          <button onClick={onClosePokemonWindow} className="close-button">✖</button>
           <div className="all-pokemon-container">
             <div className="pokemon-section">
               <div className="pokemon-header">
-              <h2 style={{ fontSize:"70px" }}>My Pokemon</h2>
+              <h2 className="pokemon-h2">My Pokemon</h2>
               <hr />
               </div>
               {found1.map((pkmn, idx) => {
@@ -921,9 +921,9 @@ useEffect(() => {
                 );
               })}             
               </div>
-            <div className="pokemon-section" style={{ position: "relative", bottom: "22px"}}>
-              <div className="pokemon-header" style={{ position: "relative", top: "22px"}}>
-              <h2 style={{ fontSize:"70px" }}>Enemy's Pokemon</h2>
+            <div className="pokemon-section-2">
+              <div className="pokemon-header-2">
+              <h2 className="pokemon-h2">Enemy's Pokemon</h2>
               <hr />
               </div>
               {found2.map((pkmn, idx) => {
@@ -949,52 +949,52 @@ useEffect(() => {
           </div>
         )} 
         <div className="pokemon2-container">
-        <div className="pokemon2-stats" style={{position: "relative", right: "60px"}}>
-          <h1 className="pokeName-battle" style={{position: "relative", right: "50px"}}>{getDisplayName(pokemon2.name)}</h1>
-          <h3 className="pokeText-battle" style={{position: "relative", bottom: "80px"}}>:L50 {genre2} <span className={`status-pokemon ${status2}`}>{status2}</span> </h3>
-          <div className="hp-bar-container" style={{ bottom: "95px", left: "60px" }}>
+        <div className="pokemon2-stats">
+          <h1 className="pokeName-battle-2">{getDisplayName(pokemon2.name)}</h1>
+          <h3 className="pokeText-battle-2">:L50 {genre2} <span className={`status-pokemon ${status2}`}>{status2}</span> </h3>
+          <div className="hp-bar-container-2">
             <span className="hp-bar-label">HP:</span>
             <div
               className={hpClass2}
               style={{ "--hp": hp2 / maxHp2 }}
             />
           </div>
-          <img src="assets/OP_UI.png" alt="" style={{ position: "relative", bottom: "155px", left: "0", width: "90%" }}/>
+          <img src="assets/OP_UI.png" alt="" className="ui-2"/>
         </div>
         <div className={`pokemon2`}>
-          <img id="pokemon-battle-sprite" style={{ position: "relative", right: "80px", bottom: "30px" }} src={poke2Img} alt={pokemon2.name} className={`${animation2}`} />
+          <img id="pokemon-battle-sprite-2" src={poke2Img} alt={pokemon2.name} className={`${animation2}`} />
         </div>
         </div>
         <div className="pokemon1-container">
         <div className={`pokemon1`}>
         {poke1Img && (
-          <img id="pokemon-battle-sprite" style={{ width: "300px", height: "300px", imageRendering: "crisp-edges", position: "relative", left: "250px", top: "10px" }} src={poke1Img} alt={pokemon1.name} className={`${animation1}`} />
+          <img id="pokemon-battle-sprite" src={poke1Img} alt={pokemon1.name} className={`${animation1}`} />
         )}
         </div>
-        <div className="pokemon1-stats" style={{ position: "relative", left: "370px", top: "80px"}}>
+        <div className="pokemon1-stats">
           <h1 className={`pokeName-battle`}>{getDisplayName(pokemon1.name)}</h1>
-          <h3 className="pokeText-battle" style={{ position: "relative", bottom: "80px"}}>:L50 {genre1} <span className={`status-pokemon ${status1}`}>{status1}</span> </h3>
-          <div className="hp-bar-container" style={{ bottom: "95px" }}>
+          <h3 className="pokeText-battle">:L50 {genre1} <span className={`status-pokemon ${status1}`}>{status1}</span> </h3>
+          <div className="hp-bar-container">
             <span className="hp-bar-label">HP:</span>
             <div
               className={hpClass1}
               style={{ "--hp": hp1 / maxHp1 }}
             />
           </div>
-          <h3 className="pokeText-battle" style={{ position: "relative", bottom: "150px", fontSize: "30px", letterSpacing: "1px", left: "25px" }}>{hp1} /<span style={{ position: "relative", left: "50px" }}>{maxHp1}</span></h3>
+          <h3 className="pokeText-battle-life">{hp1} /<span className="pokeText-battle-life-span">{maxHp1}</span></h3>
         </div>
-        <img src="assets/PL_UI.png" alt="" style={{ position: "relative", top: "110px", left: "0", width: "40%" }} />
+        <img src="assets/PL_UI.png" alt="" className="ui-1" />
         </div>
-        {messageFlag && <div className="moveset" style={{ height: "290px", display: "flex" }}>
+        {messageFlag && <div className="moveset-2">
           <p id="battle-message">
             {battleMessage}
           </p>
         </div>}
-        {!fightFlag && !messageFlag && <div className="moveset" style={{ height: "290px", display: "flex" }}>
+        {!fightFlag && !messageFlag && <div className="moveset-2">
         <div className="battle-menu">
           <button onClick={() => { setFightFlag(true); select.play(); }} className="options">Fight</button>
           <button onClick={() => { select.play(); setShowAllPokemon(true); }} className="options">
-          <img src="assets/pkmn.png" alt="" style={{ width: "40%" }} />
+          <img src="assets/pkmn.png" alt="" className="pkmn-img" />
           </button>
           <button onClick={() => { select.play(); setBoardFlag(true); }} className="options">Board</button>
           <button onClick={() => { 

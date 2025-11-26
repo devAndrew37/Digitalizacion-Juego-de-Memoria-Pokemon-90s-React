@@ -386,6 +386,10 @@ footer a {
     padding-top: 60px !important;     /* ajusta según la altura de nav */
     margin: 0 !important;
   }
+  .theme-button {
+    position: relative !important;
+    bottom: 2px !important;
+  }
   button {
     font-size: 25px !important;
   }

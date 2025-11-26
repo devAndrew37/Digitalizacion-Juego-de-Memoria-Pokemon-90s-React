@@ -441,7 +441,7 @@ return (
       </div>
       <div className="turn-indicator right">
         {boardFlag && <button onClick={() => { setBoardFlag(false); }} className={`${theme}`} style={{position: "relative", left: "30px"}}>Go back to Battle!</button>}
-        {!boardFlag && <img src={pokemonAnimation} alt="pokemon!" width="100px" />}
+        {!boardFlag && <img src={pokemonAnimation} alt="pokemon!" className="pokemon-icon" />}
       </div>
       </div>
       <div className="first-player-container">
