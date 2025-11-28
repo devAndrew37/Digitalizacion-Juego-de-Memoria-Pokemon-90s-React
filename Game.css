@@ -395,8 +395,8 @@
     max-width: 95vw !important;
     min-width: unset !important;
     padding: 8px !important;
-    min-height: 600px !important;
-    top: 100px;
+    min-height: 620px !important;
+    top: 50px;
     left: 10px;
   }
   .popup-coin h3, .popup-coin p {
@@ -543,7 +543,7 @@
     width: 95vw !important;
     min-width: unset !important;
     padding: 12px 8px !important;
-    min-height: 400px !important;
+    max-height: 70vh !important;
   }
   .pokeText {
     font-size: 1.4rem !important;

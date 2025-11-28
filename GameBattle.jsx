@@ -412,7 +412,7 @@ return (
         <h3 className={`score-player2`}>{score.player2}</h3>
         <h3 className={`score-player1`}>{score.player1}</h3>
         </div>
-        {boardFlag && <button onClick={() => { setBoardFlag(false); }} className={`${theme}`} style={{position: "relative", right: "30px"}}>Go back to Battle!</button>}
+        {boardFlag && <button onClick={() => { setBoardFlag(false); }} className={`go-back ${theme}`}>Go back to Battle!</button>}
         {!boardFlag && (turn === 1 ? `Turn: ${player1Mode}` : `Turn: ${player2Mode}`)}
       </div>
       <div className={`game-board ${theme}`}>
@@ -440,7 +440,7 @@ return (
         ))}
       </div>
       <div className="turn-indicator right">
-        {boardFlag && <button onClick={() => { setBoardFlag(false); }} className={`${theme}`} style={{position: "relative", left: "30px"}}>Go back to Battle!</button>}
+        {boardFlag && <button onClick={() => { setBoardFlag(false); }} className={`go-back-2 ${theme}`}>Go back to Battle!</button>}
         {!boardFlag && <img src={pokemonAnimation} alt="pokemon!" className="pokemon-icon" />}
       </div>
       </div>

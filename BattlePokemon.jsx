@@ -994,7 +994,7 @@ useEffect(() => {
         <div className="battle-menu">
           <button onClick={() => { setFightFlag(true); select.play(); }} className="options">Fight</button>
           <button onClick={() => { select.play(); setShowAllPokemon(true); }} className="options">
-          <img src="assets/pkmn.png" alt="" className="pkmn-img" />
+          <img src="assets/pkmn.png" alt="" className="pkmn-img-icon" />
           </button>
           <button onClick={() => { select.play(); setBoardFlag(true); }} className="options">Board</button>
           <button onClick={() => { 
