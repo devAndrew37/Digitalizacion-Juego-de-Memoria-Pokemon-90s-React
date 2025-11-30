@@ -556,7 +556,6 @@
   .pokeText {
     font-size: 1.4rem !important;
     margin: 20px 0 !important;
-    -webkit-text-stroke: 0.3px rgb(0, 0, 0);
   }
   .pokeName {
     position: relative;
@@ -564,7 +563,6 @@
     margin-top: 0px !important;
     margin-bottom: 20px !important;
     bottom: 15px !important;
-    -webkit-text-stroke: 0.4px rgb(0, 0, 0);
   }
   #pokemon-sprite {
     max-width: 200px !important;
