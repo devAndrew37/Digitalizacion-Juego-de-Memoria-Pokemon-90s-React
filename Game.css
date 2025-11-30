@@ -384,6 +384,14 @@
   background-color: transparent;
 }
 
+.close-button-2 {
+  float: right;
+  position: relative;
+  left: 30px;
+  top: 20px;
+  background-color: transparent;
+}
+
 .pokemon-icon {
   width: 100px;
 }
@@ -543,12 +551,12 @@
     width: 95vw !important;
     min-width: unset !important;
     padding: 12px 8px !important;
-    max-height: 70vh !important;
+    max-height: 75vh !important;
   }
   .pokeText {
     font-size: 1.4rem !important;
     margin: 20px 0 !important;
-    -webkit-text-stroke: 0.5px rgb(33, 51, 99);
+    -webkit-text-stroke: 0.3px rgb(0, 0, 0);
   }
   .pokeName {
     position: relative;
@@ -556,6 +564,7 @@
     margin-top: 0px !important;
     margin-bottom: 20px !important;
     bottom: 15px !important;
+    -webkit-text-stroke: 0.4px rgb(0, 0, 0);
   }
   #pokemon-sprite {
     max-width: 200px !important;
@@ -563,6 +572,12 @@
     width: 130px !important;
   }
   .close-button {
+    float: none !important;
+    position: relative !important;
+    left: 150px !important;
+    top: 0px !important;
+  }
+  .close-button-2 {
     float: none !important;
     position: relative !important;
     left: 150px !important;

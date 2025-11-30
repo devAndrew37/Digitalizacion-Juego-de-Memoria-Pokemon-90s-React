@@ -902,7 +902,7 @@ useEffect(() => {
     {showAllPokemon && (
       <div className="pokemon-overlay">
         <div className={`popup-pokemon-2 ${theme}`}>
-          <button onClick={onClosePokemonWindow} className="close-button">✖</button>
+          <button onClick={onClosePokemonWindow} className="close-button-2">✖</button>
           <div className="all-pokemon-container">
             <div className="pokemon-section">
               <div className="pokemon-header">

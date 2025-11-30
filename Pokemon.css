@@ -600,6 +600,16 @@
     width: 100vw !important;
     min-height: 85vh !important;
   }
+  .battle-transition-overlay {
+    min-width: 100vw !important;
+    width: 100vw !important;
+    min-height: 85vh !important;
+  }
+  .popup-battle-pokemon-animation {
+    min-width: 100vw !important;
+    width: 100vw !important;
+    min-height: 85vh !important;
+  }
   .pokemon1-container, .pokemon2-container, .moveset, .moveset-2 {
     width: 95vw !important;
     min-width: 90vw !important;
@@ -607,17 +617,17 @@
     position: relative !important;
   }
   .pokemon1-container {
-    left: -40px !important;
-    top: -20px !important;
+    left: -60px !important;
+    top: -80px !important;
   }
   .pokemon2-container {
-    left: -50px !important;
+    left: -60px !important;
     top: -40px !important;
   }
   .moveset {
     min-height: 200px !important;
     right: 70px !important;
-    top: 190px !important;
+    bottom: -140px !important;
     gap: 5px !important;
   }
   .moves {
@@ -630,7 +640,7 @@
     min-height: 200px !important;
     height: 150px !important;
     right: 70px !important;
-    top: 190px !important;
+    top: 140px !important;
   }
   #battle-message {
     font-size: 35px !important;
@@ -661,7 +671,7 @@
   }
   .pokeName-battle {
     top: 150px !important;
-    left: 110px !important;
+    left: 130px !important;
   }
   .pokeName-battle-2 {
     top: 50px !important;
@@ -675,11 +685,11 @@
   }
   .pokeText-battle {
     top: 140px !important;
-    left: 110px !important;
+    left: 145px !important;
   }
   .pokeText-battle-life {
     top: 105px !important;
-    left: 70px !important;
+    left: 100px !important;
   }
   .pokeText-battle-2 {
     top: 40px !important;
@@ -703,7 +713,7 @@
   }
   .hp-bar-container {
     top: 120px !important;
-    left: 100px !important;
+    left: 120px !important;
   }
   .hp-bar-container-2 {
     top: 20px !important;
@@ -712,7 +722,7 @@
   .ui-1 {
     width: 60% !important;
     top: 250px !important;
-    left: -100px !important;
+    left: -70px !important;
   }
   .ui-2 {
     width: 100% !important;
@@ -722,7 +732,7 @@
   #pokemon-battle-sprite {
     width: 150px !important;
     height: 150px !important;
-    top: 180px !important;
+    top: 170px !important;
   }
   #pokemon-battle-sprite-2 {
     width: 125px !important;
@@ -734,6 +744,8 @@
     font-size: 15px !important;
     margin-left: 5px !important;
     padding: 2px 5px !important;
+    bottom: 1px !important;
+    position: relative !important;
   }
   .lose-icon {
     position: absolute;
@@ -760,7 +772,7 @@
   .popup-pokemon-2 {
     padding: 0px !important;
     min-width: 95vw !important;
-    min-height: 80vh !important;
+    max-height: 85vh !important;
   }
   .all-pokemon-container {
     gap: 50px !important;
@@ -785,7 +797,7 @@
     font-size: 35px !important;
   }
   .pkmn-img {
-    width: 60% !important;
+    width: 100px !important;
   }
   .lose-icon-short, .win-icon-short {
     width: 20% !important;
@@ -796,6 +808,56 @@
   .pokemon-section-2 > .pkmn-battled {
     position: relative !important;
     top: 22px !important;
+  }
+}
+
+@media (max-width: 900px) and (max-height: 400px) {          /* modo landscape */
+.popup-pokemon-2 {
+    padding: 0px !important;
+    max-width: 140vw !important;
+    max-height: 180vh !important;
+  }
+  .all-pokemon-container {
+    gap: 50px !important;
+    height: 180vh;
+    padding: 30px 0 !important;
+  }
+  .pokemon-section {
+    min-width: 35vw !important;
+    padding: 0 !important;
+    left: 15px !important;
+  }
+  .pokemon-section-2 {
+    min-width: 35vw !important;
+    bottom: 22px !important;
+    right: 60px !important;
+  }
+  .pokemon-header, .pokemon-header-2 {
+    font-size: 20px !important;
+
+  }
+  .pokemon-h2, .pokemon-h2-2 {
+    font-size: 55px !important;
+  }
+  .pkmn-img {
+    width: 170px !important;
+  }
+  .lose-icon-short, .win-icon-short {
+    width: 20% !important;
+  }
+  .pkmn-battled p {
+    font-size: 52px !important;
+  }
+  .pokemon-section-2 > .pkmn-battled {
+    position: relative !important;
+    top: 22px !important;
+  }
+  .close-button-2 {
+    float: right !important;
+    position: relative !important;
+    left: -80px !important;
+    top: 10px !important;
+    background-color: transparent !important;
   }
 }
 
