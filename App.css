@@ -186,7 +186,7 @@ p {
 }
 
 #home {
-  min-height: 100vh;
+  min-height: 100dvh;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -196,7 +196,7 @@ p {
 }
 
 .about-container {
-  min-height: 100vh;
+  min-height: 100dvh;
   display: grid;
   grid-template-areas: 
    "header header" 
@@ -385,6 +385,11 @@ footer a {
     padding-bottom: 45px !important; /* ajusta según la altura de footer y music-player */
     padding-top: 60px !important;     /* ajusta según la altura de nav */
     margin: 0 !important;
+    min-height: 100dvh;
+    overflow: scroll !important;
+  }
+  #home {
+    padding-bottom: 0px !important;
   }
   .theme-button {
     position: relative !important;
@@ -402,7 +407,6 @@ footer a {
     box-sizing: border-box !important;
   }
   .music-player, footer {
-    position: fixed !important;
     bottom: 0 !important;
     left: 0 !important;
     width: 100vw !important;
@@ -412,19 +416,26 @@ footer a {
     box-shadow: none !important;
     padding: 0 !important;
     box-sizing: border-box !important;
+  
   }
   footer {
-  padding-top: 8px !important;
-  padding-right: 6px !important;
+    padding-top: 8px !important;
+    padding-right: 6px !important;
+    position: fixed;
+    left: 0 !important;
+    bottom: 0 !important;
+    width: 100vw !important;
+    z-index: 1000 !important;
+    
   }
   footer, footer a {
-  pointer-events: auto !important;
-  z-index: 9999 !important;
+    pointer-events: auto !important;
+    z-index: 9999 !important;
   }
   .music-player {
-  z-index: 99999 !important;
-  max-width: 20vw !important;
-  width: 20vw !important;
+    z-index: 99999 !important;
+    max-width: 20vw !important;
+    width: 20vw !important;
   }
   #cover {
     width: 100vw !important;
@@ -432,10 +443,13 @@ footer a {
     top: 0 !important;
     left: 0 !important;
   }
+  .figuras {
+    font-size: 2.6rem;
+  }
   .card-home-wrapper {
-    position: sticky;
-    left: 160px;
-    top: 700px;
+    position: relative;
+    left: 7vw;
+    top: 0px;
     margin-right: 50px;
     margin-bottom: 40px;
     margin-top: 50px;
@@ -503,7 +517,7 @@ footer a {
   }
 }
 
-@media (max-width: 900px) and (max-height: 400px) {          /* modo landscape */
+@media (max-width: 1200px) and (max-height: 500px) {          /* modo landscape */
   .card-home-wrapper {
     position: relative; 
     bottom: 300px; 

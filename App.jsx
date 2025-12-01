@@ -149,7 +149,7 @@ return (
       <img src="assets/pokegang.gif" alt="the gang" id="gang-home" />
       <h1>Memoria</h1>
       <h2>Pokemon</h2>
-      <p>Figuras de Combate</p>
+      <p className="figuras">Figuras de Combate</p>
       <br />
       {!start && <button onClick={handleStart} className={`${theme}`}>Start</button> }
       {(start && !modeFlag) && (<div style={{ display: "flex", gap: "1rem" }}>
