@@ -919,7 +919,7 @@ useEffect(() => {
                   <div key={idx} className="pkmn-battled">
                     {pairResults[idx] && <img src={pairResults[idx].winner === pkmn[0].name ? "assets/wincheck.png" : "assets/losecheck.png"} alt="status" className={pairResults[idx].winner === pkmn[0].name ? "win-icon-short" : "lose-icon-short"} />}
                       <img src={shinyFound1.includes(pkmnId) ? `assets/sprites/${pkmnId}_front_shiny.png` : `assets/sprites/${pkmnId}_front_default.png`} alt={pkmn[0].name} className="pkmn-img" width="180px" />
-                      <p className={shinyFound1.includes(pkmnId) ? `${shinyClass1}` : ""}>{getDisplayName(pkmn[0].name)}</p>
+                      <p className={shinyFound1.includes(pkmnId) ? "shiny" : ""}>{getDisplayName(pkmn[0].name)}</p>
                     <br />
                   </div>
                 );
@@ -936,7 +936,7 @@ useEffect(() => {
                   <div key={idx} className="pkmn-battled">
                     {pairResults[idx] && <img src={pairResults[idx].winner === pkmn[0].name ? "assets/wincheck.png" : "assets/losecheck.png"} alt="status" className={pairResults[idx].winner === pkmn[0].name ? "win-icon-short" : "lose-icon-short"} />}
                       <img src={shinyFound2.includes(pkmnId2) ? `assets/sprites/${pkmnId2}_front_shiny.png` : `assets/sprites/${pkmnId2}_front_default.png`} alt={pkmn[0].name} className="pkmn-img" width="180px" />
-                      <p className={shinyFound2.includes(pkmnId2) ? `${shinyClass2}` : ""}>{getDisplayName(pkmn[0].name)}</p>
+                      <p className={shinyFound2.includes(pkmnId2) ? "shiny" : ""}>{getDisplayName(pkmn[0].name)}</p>
                     <br />
                   </div>
                 );
@@ -1008,7 +1008,7 @@ useEffect(() => {
             setTimeout(() => {
             setPoke1Img("assets/runaway.png");
             runAway.play();
-              finishFight(id2);
+            finishFight(id2);
             }, 1000); }} className="options">Run</button>
         </div>
         </div>}
