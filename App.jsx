@@ -149,14 +149,14 @@ return (
         <div className="popup-overlay">
           <div className={`popup-help ${theme}`}>
           <h2 className='help-h2'>Classic Mode</h2>
-          <p className='help-p'>Play Memory in Classic Mode, match Pokemon pairs and win points!</p>
+          <p className='help-p'>Match Pokemon pairs and win points!</p>
           <p className='help-p'>Just like the board game!</p>
           <img src="assets/classic.gif" className='help-gif' alt="classic mode" width="100%" />
           <br />
           <br />
           <br />
           <h2 className='help-h2'>Battle Mode</h2>
-          <p className='help-p'>Play in Battle Mode, it's a memory game but with a twist: Gameboy battles as we remember from back in the 90s!</p>
+          <p className='help-p'>It's a memory game but with a twist: Gameboy battles as we remember from back in the 90s!</p>
           <img src="assets/battle.gif" className='help-gif' alt="battle mode" width="100%" />
           <br />
           <br />
