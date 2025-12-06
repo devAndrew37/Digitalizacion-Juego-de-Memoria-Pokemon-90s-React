@@ -7,16 +7,21 @@ import GameBattle from './GameBattle.jsx';
 import { cardDeck } from './cardDeck';
 import { assets } from './assetsList';
 
+export const preloadedImages = {};
+export const preloadedAudios = {};
+
 function preloadAsset(src) {
   return new Promise((resolve) => {
-    if (src.match(/\.(png|jpg|jpeg|gif|svg)$/)) {
+    if (src.match(/\.(png|jpg|jpeg|gif|svg|PNG)$/)) {
       const img = new window.Image();
       img.onload = img.onerror = resolve;
       img.src = src;
+      preloadedImages[src] = img; // Guardar la imagen
     } else if (src.match(/\.(mp3|wav|ogg)$/)) {
       const audio = new window.Audio();
       audio.oncanplaythrough = audio.onerror = resolve;
       audio.src = src;
+      preloadedAudios[src] = audio; // Guardar el audio
     } else {
       resolve();
     }
@@ -59,8 +64,6 @@ function Home({ setIsPlaying, theme }) {
   const [showPopup, setShowPopup] = useState(false);
   const [loading, setLoading] = useState(true);
   
-  
-
 const handleStart = () => {
     setStart(true);
     startSound.play();
@@ -164,6 +167,8 @@ useEffect(() => {
 useEffect(() => {
     Promise.all(assets.map(preloadAsset)).then(() => {
       setLoading(false);
+      console.log(preloadedImages);
+      console.log(preloadedAudios);
     });
   }, []);
 
@@ -176,9 +181,10 @@ if (loading) {
   );
 }
 
-return (
+if(!loading) {
+  return (
   <>
-  <img src="assets/cover.png" alt="cover" id="cover" width="400px" />
+  <img src={preloadedImages["/assets/cover.png"].src} alt="cover" id="cover" width="400px" />
     <div id="home">
       {showPopup && (
         <div className="popup-overlay">
@@ -187,21 +193,21 @@ return (
             <h2 className='help-h2'>Classic Mode</h2>
             <p className='help-p'>Match Pokemon pairs and win points!</p>
             <p className='help-p'>Just like the board game!</p>
-            <img src="assets/classic.gif" className='help-gif' alt="classic mode" />
+            <img src={preloadedImages["/assets/classic.gif"].src} className='help-gif' alt="classic mode" />
             <br />
             <br />
             <br />
             <h2 className='help-h2'>Battle Mode</h2>
             <p className='help-p'>It's a memory game but with a twist: </p>
             <p className='help-p'>Gameboy battles as we remember from back in the 90s!</p>
-            <img src="assets/battle.gif" className='help-gif' alt="battle mode" />
+            <img src={preloadedImages["/assets/battle.gif"].src} className='help-gif' alt="battle mode" />
             <br />
             <br />
             <p className='help-p'>You can change the theme of the game using the theme icon</p> 
-            <img src="assets/themes.png" alt="themes" width={40} style={{backgroundColor: '#222', borderRadius: '10px', padding: '3px'}} />
+            <img src={preloadedImages["/assets/themes.png"].src} alt="themes" width={40} style={{backgroundColor: '#222', borderRadius: '10px', padding: '3px'}} />
             <br />
             <br />
-            <p className='help-p'>And you can also change the music using the controls on the bottom left 🎶<img src="assets/charmander.gif" className='char-help' /> </p> 
+            <p className='help-p'>And you can also change the music using the controls on the bottom left 🎶<img src={preloadedImages["/assets/charmander.gif"].src} className='char-help' /> </p> 
             <br />
             <button onClick={() => setShowPopup(false)} className={`${theme}`}>Ok!</button>
             <br />
@@ -211,7 +217,7 @@ return (
       )}
       <br />
       <br />
-      <img src="assets/pokegang.gif" alt="the gang" id="gang-home" />
+      <img src={preloadedImages["/assets/pokegang.gif"].src} alt="the gang" id="gang-home" />
       <h1>Memoria</h1>
       <h2>Pokemon</h2>
       <p className="figuras">Figuras de Combate</p>
@@ -264,7 +270,7 @@ return (
       </div>)}
       <br />
       {start && <button onClick={() => {setShowPopup(true)}} className="help-button"></button>}
-      <img src="assets/pikachuyellow.gif" alt="pikapika" width="20%" id="pikachu-home" onClick={() => {
+      <img src={preloadedImages["/assets/pikachuyellow.gif"].src} alt="pikapika" width="20%" id="pikachu-home" onClick={() => {
         const randomPika = Math.random() < 0.5 ? pikaPika : pikachuStart;
         randomPika.play();
       }} />
@@ -277,7 +283,7 @@ return (
       >
         <div className="card-inner">
           <div className="card-front">
-            <img src="assets/back.PNG" alt="back" />
+            <img src={preloadedImages["/assets/back.PNG"].src} alt="back" />
           </div>
           <div className="card-back">
             <img src={randomCard.src} alt={randomCard.name} />
@@ -289,6 +295,7 @@ return (
   </div>
   </>
   );
+}
 }
 
 function About({ theme }) {
@@ -329,7 +336,7 @@ function About({ theme }) {
       onMouseMove={handleMouseMove}
       onMouseLeave={handleMouseLeave}
       >
-       <img src="assets/about1.jpg" alt="board game" className='imageblock' style={{ borderRadius: "10px" }} />
+       <img src={preloadedImages["/assets/about1.jpg"].src} alt="board game" className='imageblock' style={{ borderRadius: "10px" }} />
       {zoom.show && (
       <div
         className="img-zoom-rect"
@@ -361,7 +368,7 @@ function About({ theme }) {
       onMouseMove={handleMouseMove2}
       onMouseLeave={handleMouseLeave2}
       >
-       <img src="assets/about2.jpg" alt="board game2" className='imageblock' style={{ borderRadius: "10px" }} />
+       <img src={preloadedImages["/assets/about2.jpg"].src} alt="board game2" className='imageblock' style={{ borderRadius: "10px" }} />
           {zoom2.show && (
       <div
         className="img-zoom-rect"

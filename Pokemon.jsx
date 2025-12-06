@@ -2,6 +2,7 @@ import React from "react";
 import { useState, useEffect } from "react";
 import "./Pokemon.css";
 import { cardDeck } from './cardDeck';
+import { preloadedImages, preloadedAudios } from './App.jsx';
 
 const Pokemon = ({ name, url, onClose, theme }) => {
  const [pokemon, setPokemon] = useState(null);

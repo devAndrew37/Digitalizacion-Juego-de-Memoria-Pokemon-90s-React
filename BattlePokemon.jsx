@@ -2,6 +2,7 @@ import React from "react";
 import { useState, useEffect, useRef } from "react";
 import "./Pokemon.css";
 import { cardDeck } from './cardDeck';
+import { preloadedImages, preloadedAudios } from './App.jsx';
 
 const Battle = ({ id1, id2, theme, showTransition, setShowTransition, onClose, setBattleMusic, setIsPlaying, setTurn, boardFlag, setBoardFlag, 
   pairResults, setPairResults, found1, found2, shinyFound1, shinyFound2, setShinyFound1, setShinyFound2, setScore }) => {

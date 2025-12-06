@@ -5,6 +5,7 @@ import "./Game.css";
 import Pokemon from "./Pokemon.jsx";
 import HeadTails from "./HeadTails.jsx";
 import { cardDeck } from './cardDeck';
+import { preloadedImages, preloadedAudios } from './App.jsx';
 
 const Game = ({ setIsPlaying, theme }) => {
  const navigate = useNavigate();
