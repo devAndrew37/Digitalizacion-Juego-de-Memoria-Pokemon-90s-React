@@ -427,10 +427,10 @@ return (
               >
                 <div className="card-inner">
                   <div className="card-front">
-                    <img src="assets/back.PNG" alt="back" />
+                    <img src={preloadedImages["/assets/back.PNG"].src} alt="back" />
                   </div>
                   <div className="card-back">
-                    <img src={card.src} alt={card.name} />
+                    <img src={preloadedImages[card.src].src} alt={card.name} />
                   </div>
                 </div>
               </div>

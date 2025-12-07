@@ -2,7 +2,7 @@ import { preloadedImages, preloadedAudios } from './App.jsx';
 
 export const cardDeck = [
   {
-    src: "assets/Arbo.PNG",
+    src: "/assets/Arbo.PNG",
     figure: 1,
     name: "ekans",
     pair: 1,
@@ -14,7 +14,7 @@ export const cardDeck = [
     mov4: ["Leer", "Normal", "Status", "The user stares at the target, lowering its Defense. ", 0, 100, 30, "lowerDef"] 
   },
   {
-    src: "assets/Arbo.PNG",
+    src: "/assets/Arbo.PNG",
     figure: 1,
     name: "ekans",
     pair: 2,
@@ -26,7 +26,7 @@ export const cardDeck = [
     mov4: ["Leer", "Normal", "Status", "The user stares at the target, lowering its Defense. ", 0, 100, 30, "lowerDef"] 
   },
   {
-    src: "assets/Aria.PNG",
+    src: "/assets/Aria.PNG",
     figure: 2,
     name: "clefairy",
     pair: 1,
@@ -38,7 +38,7 @@ export const cardDeck = [
     mov4: ["Moonblast", "Psychic", "Atk", "The user attacks with a powerful blast of moonlight. It may also lower the target's Special Attack stat.", 95, 100, 15, "lowerSpAtk"] 
   },
   {
-    src: "assets/Aria.PNG",
+    src: "/assets/Aria.PNG",
     figure: 2,
     name: "clefairy",
     pair: 2,
@@ -50,7 +50,7 @@ export const cardDeck = [
     mov4: ["Moonblast", "Psychic", "Atk", "The user attacks with a powerful blast of moonlight. It may also lower the target's Special Attack stat.", 95, 100, 15, "lowerSpAtk"] 
   },
   {
-    src: "assets/Ariala.PNG",
+    src: "/assets/Ariala.PNG",
     figure: 3,
     name: "clefable",
     pair: 1,
@@ -62,7 +62,7 @@ export const cardDeck = [
     mov4: ["Leer", "Normal", "Status", "The user stares at the target, lowering its Defense. ", 0, 100, 30, "lowerDef"] 
   },
   {
-    src: "assets/Ariala.PNG",
+    src: "/assets/Ariala.PNG",
     figure: 3,
     name: "clefable",
     pair: 2,
@@ -74,7 +74,7 @@ export const cardDeck = [
     mov4: ["Leer", "Normal", "Status", "The user stares at the target, lowering its Defense. ", 0, 100, 30, "lowerDef"] 
   },
   {
-    src: "assets/Blastoise.PNG",
+    src: "/assets/Blastoise.PNG",
     figure: 4,
     name: "blastoise",
     pair: 1,
@@ -86,7 +86,7 @@ export const cardDeck = [
     mov4: ["Blizzard", "Ice", "Atk", "A howling blizzard is summoned to strike the opposing team. It may also freeze them.", 110, 70, 10, "freeze"] 
   },
   {
-    src: "assets/Blastoise.PNG",
+    src: "/assets/Blastoise.PNG",
     figure: 4,
     name: "blastoise",
     pair: 2,
@@ -98,7 +98,7 @@ export const cardDeck = [
     mov4: ["Blizzard", "Ice", "Atk", "A howling blizzard is summoned to strike the opposing team. It may also freeze them.", 110, 70, 10, "freeze"] 
   },
   {
-    src: "assets/Bulbasaur.PNG",
+    src: "/assets/Bulbasaur.PNG",
     figure: 5,
     name: "bulbasaur",
     pair: 1,
@@ -110,7 +110,7 @@ export const cardDeck = [
     mov4: ["Take Down", "Normal", "Atk", "A reckless, full-body charge attack. It also hurts the user a little.", 90, 85, 20, "recoil"] 
   },
   {
-    src: "assets/Bulbasaur.PNG",
+    src: "/assets/Bulbasaur.PNG",
     figure: 5,
     name: "bulbasaur",
     pair: 2,
@@ -122,7 +122,7 @@ export const cardDeck = [
     mov4: ["Take Down", "Normal", "Atk", "A reckless, full-body charge attack. It also hurts the user a little.", 90, 85, 20, "recoil"] 
   },
   {
-    src: "assets/Butterfree.PNG",
+    src: "/assets/Butterfree.PNG",
     figure: 6,
     name: "butterfree",
     pair: 1,
@@ -134,7 +134,7 @@ export const cardDeck = [
     mov4: ["Supersonic", "Normal", "Status", "The user generates odd sound waves from its body. It may also confuse the target.", 0, 55, 20, "confuse"] 
   },
   {
-    src: "assets/Butterfree.PNG",
+    src: "/assets/Butterfree.PNG",
     figure: 6,
     name: "butterfree",
     pair: 2,
@@ -146,7 +146,7 @@ export const cardDeck = [
     mov4: ["Supersonic", "Normal", "Status", "The user generates odd sound waves from its body. It may also confuse the target.", 0, 55, 20, "confuse"] 
   },
   {
-    src: "assets/Caterpie.PNG",
+    src: "/assets/Caterpie.PNG",
     figure: 7,
     name: "caterpie",
     pair: 1,
@@ -158,7 +158,7 @@ export const cardDeck = [
     mov4: ["Leer", "Normal", "Status", "The user stares at the target, lowering its Defense. ", 0, 100, 30, "lowerDef"] 
   },
   {
-    src: "assets/Caterpie.PNG",
+    src: "/assets/Caterpie.PNG",
     figure: 7,
     name: "caterpie",
     pair: 2,
@@ -170,7 +170,7 @@ export const cardDeck = [
     mov4: ["Leer", "Normal", "Status", "The user stares at the target, lowering its Defense. ", 0, 100, 30, "lowerDef"] 
   },
   {
-    src: "assets/Charmander.PNG",
+    src: "/assets/Charmander.PNG",
     figure: 8,
     name: "charmander",
     pair: 1,
@@ -182,7 +182,7 @@ export const cardDeck = [
     mov4: ["Flamethrower", "Fire", "Atk", "The target is scorched with an intense blast of fire. It may also leave the target with a burn.", 90, 100, 15, "burn"] 
   },
   {
-    src: "assets/Charmander.PNG",
+    src: "/assets/Charmander.PNG",
     figure: 8,
     name: "charmander",
     pair: 2,
@@ -194,7 +194,7 @@ export const cardDeck = [
     mov4: ["Flamethrower", "Fire", "Atk", "The target is scorched with an intense blast of fire. It may also leave the target with a burn.", 90, 100, 15, "burn"] 
   },
   {
-    src: "assets/Dragonite.PNG",
+    src: "/assets/Dragonite.PNG",
     figure: 9,
     name: "dragonite",
     pair: 1,
@@ -206,7 +206,7 @@ export const cardDeck = [
     mov4: ["Dragon Dance", "Dragon", "Status", "The user vigorously performs a mystic dance that boosts its Attack and Speed stats.", 0, 100, 20, "raiseAtkSpeed"] 
   },
   {
-    src: "assets/Dragonite.PNG",
+    src: "/assets/Dragonite.PNG",
     figure: 9,
     name: "dragonite",
     pair: 2,
@@ -218,7 +218,7 @@ export const cardDeck = [
     mov4: ["Dragon Dance", "Dragon", "Status", "The user vigorously performs a mystic dance that boosts its Attack and Speed stats.", 0, 100, 20, "raiseAtkSpeed"] 
   },
   {
-    src: "assets/Flareon.PNG",
+    src: "/assets/Flareon.PNG",
     figure: 10,
     name: "flareon",
     pair: 1,
@@ -230,7 +230,7 @@ export const cardDeck = [
     mov4: ["Leer", "Normal", "Status", "The user stares at the target, lowering its Defense. ", 0, 100, 30, "lowerDef"] 
   },
   {
-    src: "assets/Flareon.PNG",
+    src: "/assets/Flareon.PNG",
     figure: 10,
     name: "flareon",
     pair: 2,
@@ -242,7 +242,7 @@ export const cardDeck = [
     mov4: ["Leer", "Normal", "Status", "The user stares at the target, lowering its Defense. ", 0, 100, 30, "lowerDef"] 
   },
   {
-    src: "assets/Geodude.PNG",
+    src: "/assets/Geodude.PNG",
     figure: 11,
     name: "geodude",
     pair: 1,
@@ -254,7 +254,7 @@ export const cardDeck = [
     mov4: ["Harden", "Normal", "Status", "The user stiffens all the muscles in its body to raise its Defense stat.", 0, 100, 30, "raiseDef"] 
   },
   {
-    src: "assets/Geodude.PNG",
+    src: "/assets/Geodude.PNG",
     figure: 11,
     name: "geodude",
     pair: 2,
@@ -266,7 +266,7 @@ export const cardDeck = [
     mov4: ["Harden", "Normal", "Status", "The user stiffens all the muscles in its body to raise its Defense stat.", 0, 100, 30, "raiseDef"] 
   },
   {
-    src: "assets/Grimer.PNG",
+    src: "/assets/Grimer.PNG",
     figure: 12,
     name: "grimer",
     pair: 1,
@@ -278,7 +278,7 @@ export const cardDeck = [
     mov4: ["Acid Armor", "Poison", "Status", "The user alters its cellular structure to liquefy itself, sharply raising its Defense stat.", 0, 100, 20, "raiseDef"] 
   },
   {
-    src: "assets/Grimer.PNG",
+    src: "/assets/Grimer.PNG",
     figure: 12,
     name: "grimer",
     pair: 2,
@@ -290,7 +290,7 @@ export const cardDeck = [
     mov4: ["Acid Armor", "Poison", "Status", "The user alters its cellular structure to liquefy itself, sharply raising its Defense stat.", 0, 100, 20, "raiseDef"] 
   },
   {
-    src: "assets/Haunter.PNG",
+    src: "/assets/Haunter.PNG",
     figure: 13,
     name: "haunter",
     pair: 1,
@@ -302,7 +302,7 @@ export const cardDeck = [
     mov4: ["Dream Eater", "Psychic", "Atk", "The user eats the dreams of a sleeping target. It restores the user's HP by half the damage taken by the target.", 100, 100, 20, "none"] 
   },
   {
-    src: "assets/Haunter.PNG",
+    src: "/assets/Haunter.PNG",
     figure: 13,
     name: "haunter",
     pair: 2,
@@ -314,7 +314,7 @@ export const cardDeck = [
     mov4: ["Dream Eater", "Psychic", "Atk", "The user eats the dreams of a sleeping target. It restores the user's HP by half the damage taken by the target.", 100, 100, 20, "none"] 
   },
   {
-    src: "assets/Ivysaur.PNG",
+    src: "/assets/Ivysaur.PNG",
     figure: 14,
     name: "ivysaur",
     pair: 1,
@@ -326,7 +326,7 @@ export const cardDeck = [
     mov4: ["Take Down", "Normal", "Atk", "A reckless, full-body charge attack. It also hurts the user a little.", 90, 85, 20, "recoil"] 
   },
   {
-    src: "assets/Ivysaur.PNG",
+    src: "/assets/Ivysaur.PNG",
     figure: 14,
     name: "ivysaur",
     pair: 2,
@@ -338,7 +338,7 @@ export const cardDeck = [
     mov4: ["Take Down", "Normal", "Atk", "A reckless, full-body charge attack. It also hurts the user a little.", 90, 85, 20, "recoil"] 
   },
   {
-    src: "assets/Jigglypuff.PNG",
+    src: "/assets/Jigglypuff.PNG",
     figure: 15,
     name: "jigglypuff",
     pair: 1,
@@ -350,7 +350,7 @@ export const cardDeck = [
     mov4: ["Slap", "Normal", "Atk", "The target is slapped with a flat hand. It may also leave the target with paralysis.", 20, 100, 20, "paralyze"] 
   },
   {
-    src: "assets/Jigglypuff.PNG",
+    src: "/assets/Jigglypuff.PNG",
     figure: 15,
     name: "jigglypuff",
     pair: 2,
@@ -362,7 +362,7 @@ export const cardDeck = [
     mov4: ["Slap", "Normal", "Atk", "The target is slapped with a flat hand. It may also leave the target with paralysis.", 20, 100, 20, "paralyze"] 
   },
   {
-    src: "assets/Kang.PNG",
+    src: "/assets/Kang.PNG",
     figure: 16,
     name: "kangaskhan",
     pair: 1,
@@ -374,7 +374,7 @@ export const cardDeck = [
     mov4: ["Leer", "Normal", "Status", "The user stares at the target, lowering its Defense. ", 0, 100, 30, "lowerDef"] 
   },
   {
-    src: "assets/Kang.PNG",
+    src: "/assets/Kang.PNG",
     figure: 16,
     name: "kangaskhan",
     pair: 2,
@@ -386,7 +386,7 @@ export const cardDeck = [
     mov4: ["Leer", "Normal", "Status", "The user stares at the target, lowering its Defense. ", 0, 100, 30, "lowerDef"] 
   },
   {
-    src: "assets/Karate.PNG",
+    src: "/assets/Karate.PNG",
     figure: 17,
     name: "machop",
     pair: 1,
@@ -398,7 +398,7 @@ export const cardDeck = [
     mov4: ["Leer", "Normal", "Status", "The user stares at the target, lowering its Defense. ", 0, 100, 30, "lowerDef"] 
   },
   {
-    src: "assets/Karate.PNG",
+    src: "/assets/Karate.PNG",
     figure: 17,
     name: "machop",
     pair: 2,
@@ -410,7 +410,7 @@ export const cardDeck = [
     mov4: ["Leer", "Normal", "Status", "The user stares at the target, lowering its Defense. ", 0, 100, 30, "lowerDef"] 
   },
   {
-    src: "assets/Meowth.PNG",
+    src: "/assets/Meowth.PNG",
     figure: 18,
     name: "meowth",
     pair: 1,
@@ -422,7 +422,7 @@ export const cardDeck = [
     mov4: ["Pay Day", "Normal", "Atk", "The user throws coins at the target to inflict damage. It also earns money after the battle.", 40, 100, 20, "none"] 
   },
   {
-    src: "assets/Meowth.PNG",
+    src: "/assets/Meowth.PNG",
     figure: 18,
     name: "meowth",
     pair: 2,
@@ -434,7 +434,7 @@ export const cardDeck = [
     mov4: ["Pay Day", "Normal", "Atk", "The user throws coins at the target to inflict damage. It also earns money after the battle.", 40, 100, 20, "none"] 
   },
   {
-    src: "assets/Neptune.PNG",
+    src: "/assets/Neptune.PNG",
     figure: 19,
     name: "seaking",
     pair: 1,
@@ -446,7 +446,7 @@ export const cardDeck = [
     mov4: ["Agility", "Psychic", "Status", "The user relaxes and lightens its body to move faster. This sharply raises the Speed stat.", 0, 100, 30, "raiseSpeed"] 
   },
   {
-    src: "assets/Neptune.PNG",
+    src: "/assets/Neptune.PNG",
     figure: 19,
     name: "seaking",
     pair: 2,
@@ -458,7 +458,7 @@ export const cardDeck = [
     mov4: ["Agility", "Psychic", "Status", "The user relaxes and lightens its body to move faster. This sharply raises the Speed stat.", 0, 100, 30, "raiseSpeed"] 
   },
   {
-    src: "assets/Nidoran.PNG",
+    src: "/assets/Nidoran.PNG",
     figure: 20,
     name: "nidoran♂",
     pair: 1,
@@ -470,7 +470,7 @@ export const cardDeck = [
     mov4: ["Leer", "Normal", "Status", "The user stares at the target, lowering its Defense. ", 0, 100, 30, "lowerDef"] 
   },
   {
-    src: "assets/Nidoran.PNG",
+    src: "/assets/Nidoran.PNG",
     figure: 20,
     name: "nidoran♂",
     pair: 2,
@@ -482,7 +482,7 @@ export const cardDeck = [
     mov4: ["Leer", "Normal", "Status", "The user stares at the target, lowering its Defense. ", 0, 100, 30, "lowerDef"] 
   },
   {
-    src: "assets/Nidorina.PNG",
+    src: "/assets/Nidorina.PNG",
     figure: 21,
     name: "nidorina",
     pair: 1,
@@ -494,7 +494,7 @@ export const cardDeck = [
     mov4: ["Leer", "Normal", "Status", "The user stares at the target, lowering its Defense. ", 0, 100, 30, "lowerDef"] 
   },
   {
-    src: "assets/Nidorina.PNG",
+    src: "/assets/Nidorina.PNG",
     figure: 21,
     name: "nidorina",
     pair: 2,
@@ -506,7 +506,7 @@ export const cardDeck = [
     mov4: ["Leer", "Normal", "Status", "The user stares at the target, lowering its Defense. ", 0, 100, 30, "lowerDef"] 
   },
   {
-    src: "assets/Orphon.png",
+    src: "/assets/Orphon.png",
     figure: 22,
     name: "cubone",
     pair: 1,
@@ -518,7 +518,7 @@ export const cardDeck = [
     mov4: ["Leer", "Normal", "Status", "The user stares at the target, lowering its Defense. ", 0, 100, 30, "lowerDef"] 
   },
   {
-    src: "assets/Orphon.png",
+    src: "/assets/Orphon.png",
     figure: 22,
     name: "cubone",
     pair: 2,
@@ -530,7 +530,7 @@ export const cardDeck = [
     mov4: ["Leer", "Normal", "Status", "The user stares at the target, lowering its Defense. ", 0, 100, 30, "lowerDef"] 
   },
   {
-    src: "assets/Persian.PNG",
+    src: "/assets/Persian.PNG",
     figure: 23,
     name: "persian",
     pair: 1,
@@ -542,7 +542,7 @@ export const cardDeck = [
     mov4: ["Feint Attack", "Normal", "Atk", "The user draws close to the target and strikes without fail. This attack never misses.", 60, 100, 20, "none"] 
   },
   {
-    src: "assets/Persian.PNG",
+    src: "/assets/Persian.PNG",
     figure: 23,
     name: "persian",
     pair: 2,
@@ -554,7 +554,7 @@ export const cardDeck = [
     mov4: ["Feint Attack", "Normal", "Atk", "The user draws close to the target and strikes without fail. This attack never misses.", 60, 100, 20, "none"] 
   },
   {
-    src: "assets/Pidgotto.PNG",
+    src: "/assets/Pidgotto.PNG",
     figure: 24,
     name: "pidgeotto",
     pair: 1,
@@ -566,7 +566,7 @@ export const cardDeck = [
     mov4: ["Feather Dance", "Flying", "Status", "The user covers the target with a mass of down that sharply lowers the target's Attack stat.", 0, 100, 15, "lowerAtk"] 
   },
   {
-    src: "assets/Pidgotto.PNG",
+    src: "/assets/Pidgotto.PNG",
     figure: 24,
     name: "pidgeotto",
     pair: 2,
@@ -578,7 +578,7 @@ export const cardDeck = [
     mov4: ["Feather Dance", "Flying", "Status", "The user covers the target with a mass of down that sharply lowers the target's Attack stat.", 0, 100, 15, "lowerAtk"] 
   },
   {
-    src: "assets/Pikachu.PNG",
+    src: "/assets/Pikachu.PNG",
     figure: 25,
     name: "pikachu",
     pair: 1,
@@ -590,7 +590,7 @@ export const cardDeck = [
     mov4: ["Thunder Wave", "Electric", "Status", "A weak electric charge is launched at the target. It causes paralysis if it hits.", 0, 90, 20, "paralyze"] 
   },
   {
-    src: "assets/Pikachu.PNG",
+    src: "/assets/Pikachu.PNG",
     figure: 25,
     name: "pikachu",
     pair: 2,
@@ -602,7 +602,7 @@ export const cardDeck = [
     mov4: ["Thunder Wave", "Electric", "Status", "A weak electric charge is launched at the target. It causes paralysis if it hits.", 0, 90, 20, "paralyze"] 
   },
   {
-    src: "assets/Psyduck.PNG",
+    src: "/assets/Psyduck.PNG",
     figure: 26,
     name: "psyduck",
     pair: 1,
@@ -614,7 +614,7 @@ export const cardDeck = [
     mov4: ["Psybeam", "Psychic", "Atk", "The target is attacked with a peculiar ray. It may also leave the target confused.", 65, 100, 20, "confuse"] 
   },
   {
-    src: "assets/Psyduck.PNG",
+    src: "/assets/Psyduck.PNG",
     figure: 26,
     name: "psyduck",
     pair: 2,
@@ -626,7 +626,7 @@ export const cardDeck = [
     mov4: ["Psybeam", "Psychic", "Atk", "The target is attacked with a peculiar ray. It may also leave the target confused.", 65, 100, 20, "confuse"] 
   },
   {
-    src: "assets/Raichu.PNG",
+    src: "/assets/Raichu.PNG",
     figure: 27,
     name: "raichu",
     pair: 1,
@@ -638,7 +638,7 @@ export const cardDeck = [
     mov4: ["Agility", "Psychic", "Status", "The user relaxes and lightens its body to move faster. This sharply raises the Speed stat.", 0, 100, 30, "raiseSpeed"] 
   },
   {
-    src: "assets/Raichu.PNG",
+    src: "/assets/Raichu.PNG",
     figure: 27,
     name: "raichu",
     pair: 2,
@@ -650,7 +650,7 @@ export const cardDeck = [
     mov4: ["Agility", "Psychic", "Status", "The user relaxes and lightens its body to move faster. This sharply raises the Speed stat.", 0, 100, 30, "raiseSpeed"] 
   },
   {
-    src: "assets/Raticate.PNG",
+    src: "/assets/Raticate.PNG",
     figure: 28,
     name: "raticate",
     pair: 1,
@@ -662,7 +662,7 @@ export const cardDeck = [
     mov4: ["Quick Attack", "Normal", "Atk", "The user lunges at the target at a speed that makes it almost invisible. This move always goes first.", 40, 100, 30, "priority"] 
   },
   {
-    src: "assets/Raticate.PNG",
+    src: "/assets/Raticate.PNG",
     figure: 28,
     name: "raticate",
     pair: 2,
@@ -674,7 +674,7 @@ export const cardDeck = [
     mov4: ["Quick Attack", "Normal", "Atk", "The user lunges at the target at a speed that makes it almost invisible. This move always goes first.", 40, 100, 30, "priority"] 
   },
   {
-    src: "assets/Rattata.PNG",
+    src: "/assets/Rattata.PNG",
     figure: 29,
     name: "rattata",
     pair: 1,
@@ -686,7 +686,7 @@ export const cardDeck = [
     mov4: ["Bite", "Normal", "Atk", "The target is bitten with vicious fangs. It may also make the target flinch.", 60, 100, 25, "flinch"] 
   },
   {
-    src: "assets/Rattata.PNG",
+    src: "/assets/Rattata.PNG",
     figure: 29,
     name: "rattata",
     pair: 2,
@@ -698,7 +698,7 @@ export const cardDeck = [
     mov4: ["Bite", "Normal", "Atk", "The target is bitten with vicious fangs. It may also make the target flinch.", 60, 100, 25, "flinch"] 
   },
   {
-    src: "assets/Sandshrew.png",
+    src: "/assets/Sandshrew.png",
     figure: 30,
     name: "sandshrew",
     pair: 1,
@@ -710,7 +710,7 @@ export const cardDeck = [
     mov4: ["Sand Attack", "Ground", "Status", "The user throws sand in the target's face, reducing its accuracy.", 0, 100, 15, "lowerAcc"] 
   },
   {
-    src: "assets/Sandshrew.png",
+    src: "/assets/Sandshrew.png",
     figure: 30,
     name: "sandshrew",
     pair: 2,
@@ -722,7 +722,7 @@ export const cardDeck = [
     mov4: ["Sand Attack", "Ground", "Status", "The user throws sand in the target's face, reducing its accuracy.", 0, 100, 15, "lowerAcc"] 
   },
   {
-    src: "assets/Slowbro.PNG",
+    src: "/assets/Slowbro.PNG",
     figure: 31,
     name: "slowbro",
     pair: 1,
@@ -734,7 +734,7 @@ export const cardDeck = [
     mov4: ["Amnesia", "Psychic", "Status", "The user temporarily empties its mind to forget its worries. This sharply raises the user's Special Defense stat.", 0, 100, 20, "raiseSpDef"] 
   },
   {
-    src: "assets/Slowbro.PNG",
+    src: "/assets/Slowbro.PNG",
     figure: 31,
     name: "slowbro",
     pair: 2,
@@ -746,7 +746,7 @@ export const cardDeck = [
     mov4: ["Amnesia", "Psychic", "Status", "The user temporarily empties its mind to forget its worries. This sharply raises the user's Special Defense stat.", 0, 100, 20, "raiseSpDef"] 
   },
   {
-    src: "assets/Slowmo.PNG",
+    src: "/assets/Slowmo.PNG",
     figure: 32,
     name: "slowpoke",
     pair: 1,
@@ -758,7 +758,7 @@ export const cardDeck = [
     mov4: ["Psychic", "Psychic", "Atk", "The target is hit by a strong telekinetic force. It may also lower the target's Special Defense stat.", 90, 100, 10, "lowerSpDef"] 
   },
   {
-    src: "assets/Slowmo.PNG",
+    src: "/assets/Slowmo.PNG",
     figure: 32,
     name: "slowpoke",
     pair: 2,
@@ -770,7 +770,7 @@ export const cardDeck = [
     mov4: ["Psychic", "Psychic", "Atk", "The target is hit by a strong telekinetic force. It may also lower the target's Special Defense stat.", 90, 100, 10, "lowerSpDef"] 
   },
   {
-    src: "assets/Squirtle.PNG",
+    src: "/assets/Squirtle.PNG",
     figure: 33,
     name: "squirtle",
     pair: 1,
@@ -782,7 +782,7 @@ export const cardDeck = [
     mov4: ["Withdraw", "Water", "Status", "The user withdraws its body into its hard shell, raising its Defense stat.", 0, 100, 40, "raiseDef"] 
   },
   {
-    src: "assets/Squirtle.PNG",
+    src: "/assets/Squirtle.PNG",
     figure: 33,
     name: "squirtle",
     pair: 2,
@@ -794,7 +794,7 @@ export const cardDeck = [
     mov4: ["Withdraw", "Water", "Status", "The user withdraws its body into its hard shell, raising its Defense stat.", 0, 100, 40, "raiseDef"] 
   },
   {
-    src: "assets/Staryu.PNG",
+    src: "/assets/Staryu.PNG",
     figure: 34,
     name: "staryu",
     pair: 1,
@@ -806,7 +806,7 @@ export const cardDeck = [
     mov4: ["Recover", "Normal", "Status", "The user restores its own HP by up to half of its max HP.", 0, 100, 10, "heal"] 
   },
   {
-    src: "assets/Staryu.PNG",
+    src: "/assets/Staryu.PNG",
     figure: 34,
     name: "staryu",
     pair: 2,
@@ -818,7 +818,7 @@ export const cardDeck = [
     mov4: ["Recover", "Normal", "Status", "The user restores its own HP by up to half of its max HP.", 0, 100, 10, "heal"] 
   },
   {
-    src: "assets/Voltorb.PNG",
+    src: "/assets/Voltorb.PNG",
     figure: 35,
     name: "voltorb",
     pair: 1,
@@ -830,7 +830,7 @@ export const cardDeck = [
     mov4: ["Thunderbolt", "Electric", "Atk", "A strong electric blast crashes down on the target. It may also leave the target with paralysis.", 90, 100, 15, "paralyze"] 
   },
   {
-    src: "assets/Voltorb.PNG",
+    src: "/assets/Voltorb.PNG",
     figure: 35,
     name: "voltorb",
     pair: 2,
@@ -842,7 +842,7 @@ export const cardDeck = [
     mov4: ["Thunderbolt", "Electric", "Atk", "A strong electric blast crashes down on the target. It may also leave the target with paralysis.", 90, 100, 15, "paralyze"] 
   },
   {
-    src: "assets/Wigglytuff.PNG",
+    src: "/assets/Wigglytuff.PNG",
     figure: 36,
     name: "wigglytuff",
     pair: 1,
@@ -854,7 +854,7 @@ export const cardDeck = [
     mov4: ["Double-Edge", "Normal", "Atk", "A reckless, life-risking tackle that also hurts the user quite a lot.", 120, 100, 15, "recoil"] 
   },
   {
-    src: "assets/Wigglytuff.PNG",
+    src: "/assets/Wigglytuff.PNG",
     figure: 36,
     name: "wigglytuff",
     pair: 2,

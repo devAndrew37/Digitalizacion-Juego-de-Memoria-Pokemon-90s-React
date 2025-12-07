@@ -269,7 +269,7 @@ if(!loading) {
       </div>
       </div>)}
       <br />
-      {start && <button onClick={() => {preloadedAudios["/assets/start.mp3"].play(); setShowPopup(true);}} className="help-button"></button>}
+      {start && <button onClick={() => {setShowPopup(true);}} className="help-button"></button>}
       <img src={preloadedImages["/assets/pikachuyellow.gif"].src} alt="pikapika" width="20%" id="pikachu-home" onClick={() => {
         const randomPika = Math.random() < 0.5 ? preloadedAudios["/assets/pikapika.mp3"] : preloadedAudios["/assets/pikachu.mp3"];
         randomPika.play();
@@ -286,7 +286,7 @@ if(!loading) {
             <img src={preloadedImages["/assets/back.PNG"].src} alt="back" />
           </div>
           <div className="card-back">
-            <img src={randomCard.src} alt={randomCard.name} />
+            <img src={preloadedImages[randomCard.src].src} alt={randomCard.name} />
           </div>
         </div>
       </div>
