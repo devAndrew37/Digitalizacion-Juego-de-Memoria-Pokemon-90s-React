@@ -27,7 +27,6 @@ export const assets = [
   "/assets/favicon.ico",
   "/assets/Flareon.PNG",
   "/assets/flip.gif",
-  "/assets/gameboyfont.ttf",
   "/assets/Geodude.PNG",
   "/assets/Grimer.PNG",
   "/assets/Haunter.PNG",
