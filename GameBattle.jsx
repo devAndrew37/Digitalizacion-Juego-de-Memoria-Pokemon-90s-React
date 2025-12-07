@@ -339,7 +339,7 @@ useEffect(() => {
 useEffect(() => {
   const shuffled = shuffleCards(cards);
   setCards(shuffled);
-  match.volume = 0.5;
+  preloadedAudios["/assets/match.mp3"].volume = 0.5;
   //fetchAllPokemon();
 }, []);
 
