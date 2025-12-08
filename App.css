@@ -485,6 +485,8 @@ footer a {
 
 .loading-gif {
   width: 7%;
+  position: relative;
+  right: 1vw;
 }
 
 .loading-bar-wrapper {
@@ -495,6 +497,8 @@ footer a {
   border: 2px solid rgb(63, 94, 140);
   border-radius: 2px;
   background-color: #fff;
+  position: relative;
+  right: 1vw;
 }
 
 .loading-bar {
@@ -502,7 +506,7 @@ footer a {
   top: 0;
   left: 0;
   height: 100%;
-  width: calc((var(--loaded, 0) / var(--load-complete, 1)) * 100%);
+  width: calc(var(--loaded) / var(--total, 1) * 100%);
   background-color: #eebb09;
   transition: width 0.3s ease;  
 }

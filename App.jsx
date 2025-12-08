@@ -412,16 +412,28 @@ function preloadAsset(src) {
   return new Promise((resolve) => {
     if (src.match(/\.(png|jpg|jpeg|gif|svg|PNG)$/)) {
       const img = new window.Image();
-      img.onload = img.onerror = resolve;
+      img.onload = () => {
+        setLoaded(prev => prev + 1);
+        resolve();
+      };
+      img.onerror = () => {
+        setLoaded(prev => prev + 1);
+        resolve();
+      };
       img.src = src;
       preloadedImages[src] = img; // Guardar la imagen
-      setLoaded(prev => prev + 1);
     } else if (src.match(/\.(mp3|wav|ogg)$/)) {
       const audio = new window.Audio();
-      audio.oncanplaythrough = audio.onerror = resolve;
+      audio.oncanplaythrough = () => {
+        setLoaded(prev => prev + 1);
+        resolve();
+      };
+      audio.onerror = () => {
+        setLoaded(prev => prev + 1);
+        resolve();
+      };
       audio.src = src;
       preloadedAudios[src] = audio; // Guardar el audio
-      setLoaded(prev => prev + 1);
     } else {
       resolve();
     }
@@ -490,7 +502,7 @@ if (loading) {
       <div className="loading-bar-wrapper">
           <div
               className="loading-bar"
-              style={{ "--loaded": loaded / loadComplete }}
+              style={{ "--loaded": loaded, "--total": loadComplete }}
           />
       </div>
     </div>
