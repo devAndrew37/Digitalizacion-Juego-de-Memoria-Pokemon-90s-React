@@ -10,24 +10,6 @@ import { assets } from './assetsList';
 export const preloadedImages = {};
 export const preloadedAudios = {};
 
-function preloadAsset(src) {
-  return new Promise((resolve) => {
-    if (src.match(/\.(png|jpg|jpeg|gif|svg|PNG)$/)) {
-      const img = new window.Image();
-      img.onload = img.onerror = resolve;
-      img.src = src;
-      preloadedImages[src] = img; // Guardar la imagen
-    } else if (src.match(/\.(mp3|wav|ogg)$/)) {
-      const audio = new window.Audio();
-      audio.oncanplaythrough = audio.onerror = resolve;
-      audio.src = src;
-      preloadedAudios[src] = audio; // Guardar el audio
-    } else {
-      resolve();
-    }
-  });
-}
-
 function NavigationMenu({ theme, loading }) {
   if (!loading) {
     return (
@@ -396,6 +378,8 @@ const [volume, setVolume] = useState(0.6); // 1 = 100%
 const [prevVolume, setPrevVolume] = useState(1);
 const [theme, setTheme] = useState(themes[randomThemeIndex]);
 const [loading, setLoading] = useState(true);
+const [loaded, setLoaded] = useState(0);
+const loadComplete = assets.length;
 
 const handlePrev = () => {
   setCurrentTrackIndex((prev) => (prev === 0 ? musicTracks.length - 1 : prev - 1));
@@ -423,6 +407,26 @@ const handleThemes = () => {
     return themes[nextIndex];
   });
 };
+
+function preloadAsset(src) {
+  return new Promise((resolve) => {
+    if (src.match(/\.(png|jpg|jpeg|gif|svg|PNG)$/)) {
+      const img = new window.Image();
+      img.onload = img.onerror = resolve;
+      img.src = src;
+      preloadedImages[src] = img; // Guardar la imagen
+      setLoaded(prev => prev + 1);
+    } else if (src.match(/\.(mp3|wav|ogg)$/)) {
+      const audio = new window.Audio();
+      audio.oncanplaythrough = audio.onerror = resolve;
+      audio.src = src;
+      preloadedAudios[src] = audio; // Guardar el audio
+      setLoaded(prev => prev + 1);
+    } else {
+      resolve();
+    }
+  });
+}
 
 useEffect(() => {
     Promise.all(assets.map(preloadAsset)).then(() => {
@@ -483,6 +487,12 @@ if (loading) {
     <div className="loader-container">
       <h2 className="loading-text">Loading...</h2>
       <img src="assets/pikachu_loading.gif" alt="loading" className="loading-gif" />
+      <div className="loading-bar-wrapper">
+          <div
+              className="loading-bar"
+              style={{ "--loaded": loaded / loadComplete }}
+          />
+      </div>
     </div>
   );
 }

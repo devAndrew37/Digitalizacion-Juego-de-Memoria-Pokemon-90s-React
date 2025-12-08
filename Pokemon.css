@@ -897,6 +897,28 @@
     top: 10px !important;
     background-color: transparent !important;
   }
+  .pokemon1-container {
+    bottom: 10vh !important;
+    position: relative !important;
+    right: 5vw !important;
+  }
+  .pokemon2-container {
+    top: 10vh !important;
+    position: relative !important;
+    right: 0 !important;
+  }
+  .moveset {
+    bottom: 15vh !important;
+    position: relative !important;
+  }
+  .moves {
+    bottom: 2vh !important;
+    position: relative !important;
+  }
+  .moveset-2 {
+    bottom: 15vh !important;
+    position: relative !important;
+  }
 }
 
 /*themes---------------------------*/
