@@ -417,7 +417,7 @@
   position: relative;
   top: 110px;
   left: 0;
-  width: 40%;
+  width: 60%;
 }
 
 .ui-2 {
@@ -598,6 +598,7 @@
   color: #ffffff;
   font-weight: bold;
   text-shadow: 0 0 8px silver, 0 0 10px gold;
+  -webkit-text-stroke: 0.6px rgb(63, 94, 140);
 }
 
 .shiny::before,
@@ -632,7 +633,8 @@
   .popup-battle-pokemon {
     min-width: 100vw !important;
     width: 100vw !important;
-    min-height: 85vh !important;
+    min-height: 85dvh !important;
+    height: 85dvh !important; 
   }
   .battle-transition-overlay {
     min-width: 100vw !important;
@@ -651,17 +653,17 @@
     position: relative !important;
   }
   .pokemon1-container {
-    left: -55px !important;
-    top: -80px !important;
+    left: -12vw !important;
+    top: -8vh !important;
   }
   .pokemon2-container {
-    left: -55px !important;
-    top: -40px !important;
+    left: -12vw !important;
+    top: -2dvh !important;
   }
   .moveset {
     min-height: 200px !important;
     right: 70px !important;
-    bottom: -140px !important;
+    bottom: -20dvh !important;
     gap: 5px !important;
   }
   .moves {
@@ -674,7 +676,7 @@
     min-height: 200px !important;
     height: 150px !important;
     right: 70px !important;
-    top: 140px !important;
+    top: 20dvh !important;
   }
   #battle-message {
     font-size: 35px !important;
@@ -847,6 +849,38 @@
   }
 }
 
+@media (max-width: 600px) and (max-height: 800px) {              /* Portrait Mode small phones */
+  .pokemon1-container {
+    left: -16vw !important;
+    top: -30vh !important;
+  }
+  .pokemon2-container {
+    left: -12vw !important;
+    top: -5dvh !important;
+  }
+  .moveset {
+    min-height: 200px !important;
+    right: 70px !important;
+    bottom: -3dvh !important;
+    gap: 5px !important;
+  }
+  .moves {
+    font-size: 15px !important;
+    padding: 15px !important;
+    margin: 0 !important;
+    height: 80px !important;
+  }
+  .moveset-2 {
+    min-height: 200px !important;
+    height: 150px !important;
+    right: 70px !important;
+    top: 3dvh !important;
+  }
+  .ui-1 {
+    left: -72px !important;
+  }
+}
+
 @media (max-width: 900px) and (max-height: 400px) {          /* modo landscape */
 .popup-pokemon-2 {
     padding: 0px !important;
@@ -917,6 +951,80 @@
   }
   .moveset-2 {
     bottom: 15vh !important;
+    position: relative !important;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1024px) and (min-height: 500px) and (max-height: 1366px) {          /* modo ipad */
+.popup-pokemon-2 {
+    padding: 0px !important;
+    max-width: 140vw !important;
+    max-height: 180vh !important;
+  }
+  .all-pokemon-container {
+    gap: 50px !important;
+    height: 180vh;
+    padding: 30px 0 !important;
+  }
+  .pokemon-section {
+    min-width: 35vw !important;
+    padding: 0 !important;
+    left: 15px !important;
+  }
+  .pokemon-section-2 {
+    min-width: 35vw !important;
+    bottom: 22px !important;
+    right: 60px !important;
+  }
+  .pokemon-header, .pokemon-header-2 {
+    font-size: 20px !important;
+  }
+  .pokemon-header-2 {
+    top: 22px !important;
+  }
+  .pokemon-h2, .pokemon-h2-2 {
+    font-size: 55px !important;
+  }
+  .pkmn-img {
+    width: 170px !important;
+  }
+  .lose-icon-short, .win-icon-short {
+    width: 20% !important;
+  }
+  .pkmn-battled p {
+    font-size: 52px !important;
+  }
+  .pokemon-section-2 > .pkmn-battled {
+    position: relative !important;
+    top: 22px !important;
+  }
+  .close-button-2 {
+    float: right !important;
+    position: relative !important;
+    left: -80px !important;
+    top: 10px !important;
+    background-color: transparent !important;
+  }
+  .pokemon1-container {
+    bottom: 0vh !important;
+    position: relative !important;
+    right: 5vw !important;
+  }
+  .pokemon2-container {
+    top: -5vh !important;
+    position: relative !important;
+    right: 0 !important;
+  }
+  .moveset {
+    bottom: 0vh !important;
+    position: relative !important;
+  }
+  .moves {
+    bottom: 1vh !important;
+    position: relative !important;
+  }
+  .moveset-2 {
+    bottom: 0vh !important;
     position: relative !important;
   }
 }

@@ -57,7 +57,7 @@ nav a {
 
 .card-home-wrapper { 
   position: relative; 
-  bottom: 45vh; 
+  bottom: 45dvh; 
   left: 35vw; 
   margin-right: 20px;
 }
@@ -423,9 +423,9 @@ footer a {
     box-shadow: 0 4px 24px #0006;
     text-align: center;
     max-width: 1200px !important;
-    max-height: 80vh !important;
+    max-height: 80dvh !important;
     width: 100vw !important;
-    height: 80vh !important;
+    height: 80dvh !important;
     z-index: 2001;
     position: fixed;
     overflow-x: auto !important;
@@ -470,7 +470,7 @@ footer a {
   top: 0;
   left: 0;
   width: 100vw;
-  height: 100vh;
+  height: 100dvh;
   background-color: #d52a4a;
   display: flex;
   flex-direction: column;
@@ -660,9 +660,9 @@ footer a {
     box-shadow: 0 4px 24px #0006;
     text-align: center;
     max-width: 100vw !important;
-    max-height: 80vh !important;
+    max-height: 80dvh !important;
     width: 100vw !important;
-    height: 80vh !important;
+    height: 80dvh !important;
     z-index: 2001;
     position: fixed;
     overflow-x: auto !important;
@@ -714,7 +714,7 @@ footer a {
 @media (max-width: 1200px) and (max-height: 500px) {          /* modo landscape */
   .loading-text {
   font-size: 4rem !important;
-  top: 25vh;
+  top: 25dvh;
   }
 .loading-gif {
   width: 15%;
@@ -724,15 +724,15 @@ footer a {
   }
   .card-home-wrapper {
     position: relative; 
-    bottom: 300px; 
-    left: 37vw; 
-    margin-right: 20px;
+    bottom: 28dvh; 
+    left: 15dvw; 
+    padding-right: 5vw;
   }
   .card-home-wrapper .card {
-    width: 80px !important;
-    height: 80px !important;
-    max-width: 80px !important;
-    max-height: 80px !important;
+    width: 10vw !important;
+    height: 20vh !important;
+    max-width: 80vw !important;
+    max-height: 80vh !important;
   }
   .music-player {
     max-width: 40vw !important;
@@ -742,8 +742,9 @@ footer a {
     display: none;
   }
   #pikachu-home {
-    left: 1vw;
-    bottom: 5vh;
+    position: relative !important;
+    left: -10vw !important;
+    bottom: 5dvh;
   }  
   .about-container {
     grid-template-areas: 
@@ -799,9 +800,9 @@ footer a {
     box-shadow: 0 4px 24px #0006;
     text-align: center;
     max-width: 100vw !important;
-    max-height: 100vh !important;
+    max-height: 100dvh !important;
     width: 95vw !important;
-    height: 80vh !important;
+    height: 80dvh !important;
     z-index: 2001;
     position: fixed;
     overflow-x: auto !important;
@@ -835,7 +836,143 @@ footer a {
   }
   .close-button-help {
     position: absolute;
-    left: 750px;
+    left: 80dvw;
+    top: 10px;
+    font-size: 1.2rem !important;
+  }
+  .char-help { 
+  width: 80px;
+  top: 25px;
+  left: 0px;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1366px) and (min-height: 500px) and (max-height: 1366px) {          /* modo ipad */
+  .loading-text {
+  font-size: 4rem !important;
+  top: 25dvh;
+  }
+.loading-gif {
+  width: 15%;
+}
+  #home {
+    z-index: 5 !important;
+  }
+  .card-home-wrapper {
+    position: relative; 
+    bottom: 16dvh; 
+    left: 15dvw; 
+    padding-right: 5vw;
+  }
+  .card-home-wrapper .card {
+    width: 80px !important;
+    height: 80px !important;
+    max-width: 80vw !important;
+    max-height: 80vh !important;
+  }
+  .music-player {
+    max-width: 40vw !important;
+    width: 40vw !important;
+  }
+  .music-info, #volume-button {
+    display: none;
+  }
+  #pikachu-home {
+    position: relative !important;
+    left: -10vw !important;
+    bottom: 3dvh;
+  }  
+  .about-container {
+    grid-template-areas: 
+     "header" 
+     "about1"
+     "about2"
+     "about3"
+     "about4";
+    width: 100vw !important;
+    max-width: 100vw !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    box-sizing: border-box !important;
+  }
+  .about-container div {
+    position: static !important;
+    bottom: 0 !important;
+    margin: 20px auto !important;
+  }
+  .about1, .about2, .about3, .about4 {
+    position: static !important;
+    bottom: 0 !important;
+    left: 0 !important;
+    width: 95vw !important;
+    max-width: 100vw !important;
+    margin: 0 auto 16px auto !important;
+    padding: 8px 4px !important;
+    font-size: 10px !important;
+    box-sizing: border-box !important;
+    text-align: center !important;
+    word-break: break-word !important;
+    overflow-wrap: break-word !important;
+  }
+  .textblock{
+    text-align: center !important;
+    width: 100% !important;
+  }
+  .imageblock {
+  width: 500px;
+  }
+  .about-img-wrapper.about2 {
+   position: relative !important;
+   bottom: 20px !important;
+  }
+  .about-img-wrapper.about4 {
+   position: relative !important;
+   bottom: 50px !important;
+  }
+  .popup-help{
+    color: #222;
+    padding: 32px 45px 32px 45px;
+    border-radius: 16px;
+    box-shadow: 0 4px 24px #0006;
+    text-align: center;
+    max-width: 100vw !important;
+    max-height: 100dvh !important;
+    width: 95vw !important;
+    height: 80dvh !important;
+    z-index: 2001;
+    position: fixed;
+    overflow-x: auto !important;
+    margin-bottom: 40px !important;
+  }
+  .help-button {
+    display: block !important;
+    font-size: 1.1rem !important;
+    height: 35px !important;
+    width: 35px !important;
+    margin-bottom: 10px !important;
+    left: 0 !important;
+    bottom: 0 !important;
+    position: static !important;
+  }
+  .help-h2 {
+    font-size: 2.3rem !important;
+    margin-bottom: 0.5rem !important;
+    -webkit-text-stroke: 0.5px rgb(63, 94, 140);
+  }
+  .help-p {
+    font-size: 1.3rem !important;
+    margin-bottom: 1rem !important;
+    line-height: 1.2 !important;
+    -webkit-text-stroke: 0.5px rgb(63, 94, 140);
+  }
+  .help-gif {
+    border-radius: 10px !important;
+    width: 50% !important;
+    padding-top: 0px !important;
+  }
+  .close-button-help {
+    position: absolute;
+    left: 80dvw;
     top: 10px;
     font-size: 1.2rem !important;
   }
