@@ -30,6 +30,10 @@ Puedes hacer click a cada par de cartas en tu campo o en el del oponente para ve
 
 <img width="1919" height="901" alt="Pokedex" src="https://github.com/user-attachments/assets/f8edc72f-1ffc-4027-9173-7e5f66ab23fc" />
 
+Se añadio un modo batalla con batallas retro estilizado a lo Gameboy
+
+<img width="1919" height="906" alt="Battle" src="https://github.com/user-attachments/assets/d49c6bad-0584-4ad6-9271-86aec074ba78" />
+
 El juego cuenta con 3 niveles de dificultad para el CPU: Facil, Normal y Dificil. No he podido ganarle al modo Dificil asi que les deseo suerte! :)
 
 Controles:
@@ -77,6 +81,10 @@ The game consists of 36 Pokemon to discover, as a curious fact, whoever first fi
 You can click on each pair of cards on your field or your opponent's field to see the Pokemon's Pokedex data.
 
 <img width="1919" height="901" alt="Pokedex" src="https://github.com/user-attachments/assets/f8edc72f-1ffc-4027-9173-7e5f66ab23fc" />
+
+A Battle Mode was added with battles inspired to the classic Gameboy Pokemon games
+
+<img width="1919" height="906" alt="Battle" src="https://github.com/user-attachments/assets/d49c6bad-0584-4ad6-9271-86aec074ba78" />
 
 The game has three difficulty levels for the CPU: Easy, Normal, and Hard. I haven't been able to beat Hard mode, so I wish you luck! :)
 
