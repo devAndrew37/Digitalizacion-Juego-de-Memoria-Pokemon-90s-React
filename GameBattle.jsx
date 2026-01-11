@@ -17,7 +17,7 @@ const Game = ({ setIsPlaying, theme }) => {
  const match = new Audio("assets/match.mp3");
  const youWin = new Audio("assets/youwin.mp3");
  const youLose = new Audio("assets/youlose.mp3");
- const mainMenu = new Audio("assets/main_menu.mp3");
+ const mainMenu = new Audio("assets/mainmenu.mp3");
  const tie = new Audio("assets/tie.mp3");
  const battle = useRef(new Audio("assets/battlemusic.mp3"));
  const battleloop = useRef(new Audio("assets/battleloop.mp3"));
@@ -380,7 +380,7 @@ return (
           <h2 className="end-message">{popupMessage}</h2>
           <div className="popup-buttons">
           <button className={`${theme}`} onClick={() => {
-            preloadedAudios["/assets/mainmenu.mp3"].play();
+            preloadedAudios["/assets/mainmenu.mp3"] ? preloadedAudios["/assets/mainmenu.mp3"].play() : mainMenu.play();
             setTimeout(() => {
               navigate('/');
             }, 2600);
