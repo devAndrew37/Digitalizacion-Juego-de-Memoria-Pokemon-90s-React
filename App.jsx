@@ -172,7 +172,6 @@ if(!loading) {
   return (
   <>
   <img src={preloadedImages["/assets/cover.png"].src} alt="cover" id="cover" width="400px" />
-  <img src={preloadedImages["/assets/pokedex.png"].src} alt="pokedex" id='pokedex' className="pokedex" onClick={handlePokedex} />
     <div id="home">
       {showPopup && (
         <div className="popup-overlay">
@@ -275,6 +274,7 @@ if(!loading) {
       </div>
     )}
   </div>
+  <img src={preloadedImages["/assets/pokedex.png"].src} alt="pokedex" id='pokedex' className="pokedex" onClick={handlePokedex} />
   </div>
   </>
   );

@@ -293,7 +293,7 @@ p {
   width: 120px;
   max-width: 50%;
   height: auto;
-  z-index: 3;
+  z-index: 6;
 }
 
 .pokedex-gif {
@@ -303,7 +303,7 @@ p {
   width: 300px;
   max-width: 50%;
   height: auto;
-  z-index: 3;
+  z-index: 6;
 }
 
 .pokedex:hover, .pokedex-gif:hover {
@@ -605,22 +605,20 @@ footer a {
     left: 0 !important;
   }
   .pokedex {
-  position: relative !important;
-  top: 900px;
-  left: 65vw;
-  width: 60px;
-  max-width: 50%;
-  height: auto;
-  z-index: 3;
+    position: relative !important;
+    top: -105px !important;
+    left: 25vw !important;
+    width: 60px !important;
+    max-width: 50% !important;
+    height: auto !important;
   }
   .pokedex-gif {
     position: relative !important;
-    top: 920px;
-    left: 55vw;
-    width: 140px;
-    max-width: 50%;
-    height: auto;
-    z-index: 3;
+    top: -120px !important;
+    left: 23vw !important;
+    width: 130px !important;
+    max-width: 50% !important;
+    height: auto !important;
   }
   .figuras {
     font-size: 2.6rem;
@@ -628,7 +626,7 @@ footer a {
   .card-home-wrapper {
     position: relative;
     left: -12vw;
-    top: 0px;
+    top: 20px;
     margin-right: 50px;
     margin-bottom: 40px;
     margin-top: 50px;
@@ -766,25 +764,23 @@ footer a {
   }
   .pokedex {
     position: relative !important;
-    top: 690px;
-    left: 75vw;
-    width: 65px;
-    max-width: 50%;
-    height: auto;
-    z-index: 3;
+    top: -170px !important;
+    left: 28vw !important;
+    width: 65px !important;
+    max-width: 50% !important;
+    height: auto !important;
   }
   .pokedex-gif {
     position: relative !important;
-    top: 690px;
-    left: 75vw;
-    width: 120px;
-    max-width: 50%;
-    height: auto;
-    z-index: 3;
+    top: -190px !important;
+    left: 29vw !important;
+    width: 140px !important;
+    max-width: 50% !important;
+    height: auto !important;
   }
   .card-home-wrapper {
     position: relative; 
-    bottom: 28dvh; 
+    bottom: 20vh; 
     left: 4dvw; 
     padding-right: 5vw;
   }
@@ -804,7 +800,7 @@ footer a {
   #pikachu-home {
     position: relative !important;
     left: -30vw !important;
-    bottom: 5dvh;
+    bottom: 0vh;
   }  
   .about-container {
     grid-template-areas: 
