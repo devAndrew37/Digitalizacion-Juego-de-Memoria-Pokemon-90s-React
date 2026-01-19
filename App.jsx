@@ -126,6 +126,29 @@ const handleFlip = async () => {
   setTimeout(() => setAnotherPokemon(true), 1700);
 };
 
+const handlePokedex = async () => {
+  const pokedex = document.getElementById('pokedex');
+  if(pokedex.src.includes('pokedex.png')) {
+  preloadedAudios["/assets/pokedex1.mp3"].volume = 0.7;
+  preloadedAudios["/assets/pokedex1.mp3"].play();
+  setTimeout(() => {
+    pokedex.classList.remove('pokedex');
+    pokedex.classList.add('pokedex-gif');
+    pokedex.src = preloadedImages["/assets/pokedex.gif"].src;
+  }, 500);
+  }
+  else if(pokedex.src.includes('pokedex.gif')) {
+  preloadedAudios["/assets/pokedex2.mp3"].volume = 0.2;
+  preloadedAudios["/assets/pokedex2.mp3"].play();
+  setTimeout(() => {
+    window.open('https://90s-pokedex.vercel.app/', '_blank');
+    pokedex.classList.remove('pokedex-gif');
+    pokedex.classList.add('pokedex');
+    pokedex.src = preloadedImages["/assets/pokedex.png"].src;
+  }, 2500);
+}
+};
+
 useEffect(() => {       // Elige una carta random al montar el componente
   setAnotherPokemon(false);
   const idx = Math.floor(Math.random() * cardDeck.length);
@@ -149,6 +172,7 @@ if(!loading) {
   return (
   <>
   <img src={preloadedImages["/assets/cover.png"].src} alt="cover" id="cover" width="400px" />
+  <img src={preloadedImages["/assets/pokedex.png"].src} alt="pokedex" id='pokedex' className="pokedex" onClick={handlePokedex} />
     <div id="home">
       {showPopup && (
         <div className="popup-overlay">

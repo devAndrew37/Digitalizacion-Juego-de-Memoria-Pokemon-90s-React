@@ -1,4 +1,8 @@
 export const assets = [
+  "/assets/pokedex.png",
+  "/assets/pokedex.gif",
+  "/assets/pokedex1.mp3",
+  "/assets/pokedex2.mp3",
   "/assets/about1.jpg",
   "/assets/about2.jpg",
   "/assets/Arbo.PNG",
