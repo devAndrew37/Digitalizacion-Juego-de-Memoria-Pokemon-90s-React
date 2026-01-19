@@ -625,7 +625,7 @@ footer a {
   }
   .card-home-wrapper {
     position: relative;
-    left: -12vw;
+    left: -15vw;
     top: 20px;
     margin-right: 50px;
     margin-bottom: 40px;
@@ -772,7 +772,7 @@ footer a {
   }
   .pokedex-gif {
     position: relative !important;
-    top: -190px !important;
+    top: -180px !important;
     left: 29vw !important;
     width: 140px !important;
     max-width: 50% !important;
