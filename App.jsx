@@ -194,7 +194,9 @@ if(!loading) {
             <img src={preloadedImages["/assets/themes.png"].src} alt="themes" width={40} style={{backgroundColor: '#222', borderRadius: '10px', padding: '3px'}} />
             <br />
             <br />
-            <p className='help-p'>And you can also change the music using the controls on the bottom left 🎶<img src={preloadedImages["/assets/charmander.gif"].src} className='char-help' /> </p> 
+            <p className='help-p'>You can also change the music using the controls on the bottom left 🎶</p> 
+            <img src={preloadedImages["/assets/charmander.gif"].src} className='char-help' /> 
+            <br />
             <br />
             <button onClick={() => setShowPopup(false)} className={`${theme}`}>Ok!</button>
             <br />
@@ -245,22 +247,21 @@ if(!loading) {
       </div>)}
       <br />
       {start && <button onClick={() => {setShowPopup(true);}} className="help-button"></button>}
-      <img src={preloadedImages["/assets/pikachuyellow.gif"].src} alt="pikapika" width="20%" id="pikachu-home" onClick={() => {
+      <img src={preloadedImages["/assets/pikachuyellow.gif"].src} alt="pikapika" id="pikachu-home" onClick={() => {
         const randomPika = Math.random() < 0.5 ? preloadedAudios["/assets/pikapika.mp3"] : preloadedAudios["/assets/pikachu.mp3"];
         randomPika.play();
       }} />
   <div className="card-home-wrapper">
     {randomCard && (
       <div
-        className={`card${flipped ? " flipped" : ""}`}
-        style={{ width: "130px", height: "130px", cursor: "pointer", backgroundColor: "transparent" }}
+        className={`card-home${flipped ? " flipped" : ""}`}
         onClick={handleFlip}
       >
-        <div className="card-inner">
-          <div className="card-front">
+        <div className="card-inner-home">
+          <div className="card-front-home">
             <img src={preloadedImages["/assets/back.PNG"].src} alt="back" />
           </div>
-          <div className="card-back">
+          <div className="card-back-home">
             <img
               src={
                 preloadedImages[randomCard.src]
