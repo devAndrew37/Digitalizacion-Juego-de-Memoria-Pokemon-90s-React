@@ -371,26 +371,53 @@ p {
   position: absolute;
   top: 450px;
   left: 81vw;
-  width: 110px;
+  width: 100px;
   max-width: 50%;
   height: auto;
   z-index: 6;
   transition: transform .2s;
+  animation: vibrar 2.5s steps(1, end) infinite;
+}
+
+@keyframes vibrar {
+  0% { transform: translate(0, 0); }
+  2% { transform: translate(-3px, 3px); }
+  4% { transform: translate(-3px, -3px); }
+  6% { transform: translate(3px, 3px); }
+  8% { transform: translate(3px, -3px); }
+  10% { transform: translate(0, 0); }
+  100% { transform: translate(0, 0); }
 }
 
 .pokedex-gif {
   position: absolute;
   top: 400px;
   left: 77vw;
-  width: 270px;
+  width: 250px;
   max-width: 50%;
   height: auto;
   z-index: 6;
   transition: transform .2s;
+  animation: vibrar 4s steps(1, end) infinite;
 }
 
 .pokedex:hover, .pokedex-gif:hover {
   transform: scale(1.1);
+}
+
+.pokedex-text {
+  background: #222;
+  opacity: 0.9;
+  color: #fff;
+  text-align: left;
+  border-radius: 8px;
+  padding: 12px 16px;
+  position: absolute;
+  z-index: 10;
+  bottom: 50%; 
+  right: 180px;
+  box-shadow: 0 4px 16px #0006;
+  font-size: 1rem;
 }
 
 button {

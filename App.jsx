@@ -27,7 +27,7 @@ function NavigationMenu({ theme, loading }) {
     );
 }}
 
-function Home({ setIsPlaying, theme, loading }) {
+function Home({ isPlaying, setIsPlaying, theme, loading }) {
   const [start, setStart] = useState(false);
   const [cpuMode, setCpuMode] = useState(false);
   const navigate = useNavigate();
@@ -44,6 +44,8 @@ function Home({ setIsPlaying, theme, loading }) {
   const [battleMode, setBattleMode] = useState(false);
   const [modeFlag, setModeFlag] = useState(false);
   const [showPopup, setShowPopup] = useState(false);
+  const [pokedexClass, setPokedexClass] = useState('pokedex');
+  const [pokedexOpenFlag, setPokedexOpenFlag] = useState(false);
   
 const handleStart = () => {
     setStart(true);
@@ -129,23 +131,26 @@ const handleFlip = async () => {
 const handlePokedex = async () => {
   const pokedex = document.getElementById('pokedex');
   if(pokedex.src.includes('pokedex.png')) {
-  preloadedAudios["/assets/pokedex1.mp3"].volume = 0.7;
-  preloadedAudios["/assets/pokedex1.mp3"].play();
-  setTimeout(() => {
-    pokedex.classList.remove('pokedex');
-    pokedex.classList.add('pokedex-gif');
-    pokedex.src = preloadedImages["/assets/pokedex.gif"].src;
-  }, 500);
+    setPokedexOpenFlag(true);
+    preloadedAudios["/assets/pokedex1.mp3"].volume = 0.7;
+    preloadedAudios["/assets/pokedex1.mp3"].play();
+    setTimeout(() => {
+      setPokedexClass('pokedex-gif');
+      pokedex.src = preloadedImages["/assets/pokedex.gif"].src;
+    }, 500);
   }
   else if(pokedex.src.includes('pokedex.gif')) {
-  preloadedAudios["/assets/pokedex2.mp3"].volume = 0.2;
-  preloadedAudios["/assets/pokedex2.mp3"].play();
-  setTimeout(() => {
-    window.open('https://90s-pokedex.vercel.app/', '_blank');
-    pokedex.classList.remove('pokedex-gif');
-    pokedex.classList.add('pokedex');
-    pokedex.src = preloadedImages["/assets/pokedex.png"].src;
-  }, 2500);
+    setPokedexOpenFlag(false);
+    preloadedAudios["/assets/pokedex2.mp3"].volume = 0.2;
+    preloadedAudios["/assets/pokedex2.mp3"].play();
+    setTimeout(() => {
+      if(isPlaying) {
+        setIsPlaying((prev) => !prev);
+      }
+      window.open('https://90s-pokedex.vercel.app/', '_blank');
+      setPokedexClass('pokedex');
+      pokedex.src = preloadedImages["/assets/pokedex.png"].src;
+    }, 2500);
 }
 };
 
@@ -275,7 +280,14 @@ if(!loading) {
       </div>
     )}
   </div>
-  <img src={preloadedImages["/assets/pokedex.png"].src} alt="pokedex" id='pokedex' className="pokedex" onClick={handlePokedex} />
+  {pokedexClass === 'pokedex' ?
+  <img src={preloadedImages["/assets/pokedex.png"].src} alt="pokedex" id='pokedex' className={pokedexClass} onClick={handlePokedex} />
+  :
+  <div>
+  <img src={preloadedImages["/assets/pokedex.gif"].src} alt="pokedex" id='pokedex' className={pokedexClass} onClick={handlePokedex} />
+  <span className={`${theme} pokedex-text`}>Tap again to go to the Pokedex App!</span>
+  </div>
+  }
   </div>
   </>
   );
@@ -597,7 +609,7 @@ if (!loading) {
       </div>
       <NavigationMenu theme={theme} loading={loading} />
       <Routes>
-        <Route path="/" element={<Home setIsPlaying={setIsPlaying} theme={theme} loading={loading} />} />
+        <Route path="/" element={<Home isPlaying={isPlaying} setIsPlaying={setIsPlaying} theme={theme} loading={loading} />} />
         <Route path="/about" element={<About theme={theme} />} />
         <Route path="/game" element={<Game setIsPlaying={setIsPlaying} theme={theme} />} />
         <Route path="/gamebattle" element={<GameBattle setIsPlaying={setIsPlaying} theme={theme} />} />
