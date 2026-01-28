@@ -41,7 +41,7 @@ export const assets = [
   "/assets/Karate.PNG",
   "/assets/lose.mp3",
   "/assets/losecheck.png",
-  "/assets/main_menu.mp3",
+  "/assets/mainmenu.mp3",
   "/assets/match.mp3",
   "/assets/Meowth.PNG",
   "/assets/misteryback.png",
