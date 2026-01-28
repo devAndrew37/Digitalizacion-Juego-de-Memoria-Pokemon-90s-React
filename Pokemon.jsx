@@ -12,7 +12,8 @@ const Pokemon = ({ name, url, onClose, theme }) => {
 
  const fetchPokemon = async () => {
   try {
-   const fetchData = await fetch(`https://corsproxy.io/?${encodeURIComponent(url)}`);
+  const proxy = "https://proxy-memoria-pokemon.onrender.com/";
+  const fetchData = await fetch(`${proxy}/${url}`);
     if(!fetchData.ok) {
       throw new Error("Pokemon not found");
     }

@@ -190,7 +190,9 @@ const showPokemonCard = (e) => {
 };
 
 const playPokeSound = async (id) => {
-  const query = await fetch(`https://corsproxy.io/?${encodeURIComponent("https://pokedex.mimo.dev/api/pokemon/" + id)}`);
+  const proxy = "https://proxy-memoria-pokemon.onrender.com/";
+  const url = `https://pokedex.mimo.dev/api/pokemon/${id}`;
+  const query = await fetch(`${proxy}/${url}`);
   const data = await query.json();
   const cryUrlLegacy = data.cries.legacy;
   const cryUrlLatest = data.cries.latest;

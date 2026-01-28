@@ -220,7 +220,9 @@ const showPokemonCard = (e) => {
 };
 
 const playPokeSound = async (id) => {
-  const query = await fetch(`https://corsproxy.io/?${encodeURIComponent("https://pokedex.mimo.dev/api/pokemon/" + id)}`);
+  const proxy = "https://proxy-memoria-pokemon.onrender.com/";
+  const url = `https://pokedex.mimo.dev/api/pokemon/${id}`;
+  const query = await fetch(`${proxy}/${url}`);
   const data = await query.json();
   const cryUrlLegacy = data.cries.legacy;
   const cryUrlLatest = data.cries.latest;
@@ -263,7 +265,9 @@ function delay(ms) {
 
 /*const fetchPokemon = async (id) => {
   try {
-   const fetchData = await fetch(`https://corsproxy.io/?${encodeURIComponent(`https://pokedex.mimo.dev/api/pokemon/${id}`)}`);
+  const proxy = "https://proxy-memoria-pokemon.onrender.com/";
+  const url = `https://pokedex.mimo.dev/api/pokemon/${id}`;
+  const fetchData = await fetch(`${proxy}/${url}`);
     if(!fetchData.ok) {
       throw new Error("Pokemon not found");
     }   
