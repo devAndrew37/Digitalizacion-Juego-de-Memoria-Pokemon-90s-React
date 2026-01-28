@@ -89,9 +89,7 @@ const Battle = ({ id1, id2, theme, showTransition, setShowTransition, onClose, s
 
  const fetchPokemon1 = async () => {
   try {
-  const proxy = "https://proxy-memoria-pokemon.onrender.com/";
-  const url = `https://pokedex.mimo.dev/api/pokemon/${id1}`;
-  const fetchData = await fetch(`${proxy}/${url}`);
+   const fetchData = await fetch(`https://corsproxy.io/?${encodeURIComponent(`https://pokedex.mimo.dev/api/pokemon/${id1}`)}`);
     if(!fetchData.ok) {
       throw new Error("Pokemon not found");
     }
@@ -127,9 +125,7 @@ const Battle = ({ id1, id2, theme, showTransition, setShowTransition, onClose, s
 
   const fetchPokemon2 = async () => {
   try {
-  const proxy = "https://proxy-memoria-pokemon.onrender.com/";
-  const url = `https://pokedex.mimo.dev/api/pokemon/${id2}`;
-  const fetchData = await fetch(`${proxy}/${url}`);
+   const fetchData = await fetch(`https://corsproxy.io/?${encodeURIComponent(`https://pokedex.mimo.dev/api/pokemon/${id2}`)}`);
     if(!fetchData.ok) {
       throw new Error("Pokemon not found");
     }

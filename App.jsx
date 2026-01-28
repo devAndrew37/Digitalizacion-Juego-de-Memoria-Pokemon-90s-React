@@ -119,9 +119,7 @@ const twoPlayerMode = () => {
 const handleFlip = async () => {
   if (flipped) return; // Evita múltiples clics rápidos
   setFlipped(true);
-  const proxy = "https://proxy-memoria-pokemon.onrender.com/";
-  const url = `https://pokedex.mimo.dev/api/pokemon/${pokemonCardId}`;
-  const query = await fetch(`${proxy}/${url}`);
+  const query = await fetch(`https://corsproxy.io/?${encodeURIComponent("https://pokedex.mimo.dev/api/pokemon/" + pokemonCardId)}`);
   const data = await query.json();
   const cryUrlLegacy = data.cries.legacy;
   const sound = new Audio(cryUrlLegacy);
