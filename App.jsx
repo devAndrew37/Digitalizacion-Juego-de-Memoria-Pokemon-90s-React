@@ -284,8 +284,8 @@ if(!loading) {
   <img src={preloadedImages["/assets/pokedex.png"].src} alt="pokedex" id='pokedex' className={pokedexClass} onClick={handlePokedex} />
   :
   <div>
-  <img src={preloadedImages["/assets/pokedex.gif"].src} alt="pokedex" id='pokedex' className={pokedexClass} onClick={handlePokedex} />
-  <span className={`${theme} pokedex-text`}>Tap again to go to the Pokedex App!</span>
+   <span className="pokedex-text">Tap again to go to the Pokedex App!</span>
+   <img src={preloadedImages["/assets/pokedex.gif"].src} alt="pokedex" id='pokedex' className={pokedexClass} onClick={handlePokedex} />
   </div>
   }
   </div>

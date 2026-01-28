@@ -1,6 +1,6 @@
 #pokemon-sprite {
     max-width: 500px;
-    margin-bottom: -20px;
+    margin-bottom: -10px;
     width: 170px;
     background-color: rgba(240, 239, 239, 0.966);
     border-radius: 10px;
@@ -9,8 +9,8 @@
 #pokemon-battle-sprite { 
     max-width: 500px;
     margin-bottom: -20px;
-    width: 260px;
-    height: 260px;
+    width: 250px;
+    height: 250px;
     background-color: transparent;
     border-radius: 10px;
     image-rendering: crisp-edges;
@@ -27,7 +27,7 @@
     background-color: transparent;
     border-radius: 10px;
     position: relative;
-    right: 140px;
+    right: 60px;
     bottom: 40px;
 }
 
@@ -35,7 +35,7 @@
   font-size: 30px;
   font-family: 'GBBoot', Arial, sans-serif;
   text-align: center;
-  margin-top: 50px;
+  margin-top: 40px;
   padding: 0px;
 }
 
@@ -59,6 +59,7 @@
   -webkit-text-stroke: 1px #525252;
   position: relative;
   bottom: 10px;
+  right: 60px;
 }
 
 .pokeName-battle-2 {
@@ -70,7 +71,7 @@
   color: #000000;
   -webkit-text-stroke: 1px #525252;
   position: relative;
-  right: 60px;
+  right: 50px;
   bottom: 5px;
 }
 
@@ -83,6 +84,7 @@
   -webkit-text-stroke: 1px #525252;
   position: relative;
   bottom: 80px;
+  right: 50px;
 }
 
 .pokeText-battle-2 {
@@ -108,7 +110,7 @@
   bottom: 150px;
   position: relative;
   letter-spacing: 1px;
-  left: 0px;
+  left: -60px;
 }
 
 .pokeText-battle-life-span {
@@ -185,10 +187,10 @@
   box-shadow: 0 4px 24px #0006;
   text-align: center;
   background: rgb(247, 246, 246);
-  width: 40vw;
-  height: 100vh;
-  min-width: 50vw;
-  min-height: 90vh;
+  width: 45vw;
+  min-width: 45vw;
+  height: 99vh;
+  min-height: 95vh;
   position: relative;
   border: thick double #161616;
 }
@@ -199,9 +201,10 @@
   box-shadow: 0 4px 24px #0006;
   text-align: center;
   background: rgb(247, 246, 246);
-  width: 1200px;
-  min-width: 1200px;
-  min-height: 900px;
+  width: 45vw;
+  min-width: 45vw;
+  height: 99vh;
+  min-height: 95vh;
   position: relative;
 }
 
@@ -221,13 +224,13 @@
 
 .pokemon1-stats {
   position: relative;
-  left: 220px;
-  top: 80px;
+  left: 110px;
+  top: 100px;
 }
 
 .pokemon2-stats {
   position: relative;
-  right: 20px;
+  right: 10px;
 }
 
 @keyframes flicker {
@@ -243,19 +246,20 @@
   100% { transform: scale(1.05) rotate(360deg); }
 }*/
 
+.pokemon1 {
+  width: 45%;
+  position: relative;
+  right: 300px; 
+  top: 10px;
+}
+
 .pokemon2 {
   float: right;
   margin-left: 50px;
   width: 45%;
   position: relative;
-  left: 200px;
-}
-
-.pokemon1 {
-  width: 45%;
-  position: relative;
-  right: 200px; 
-  top: 30px;
+  left: 140px;
+  bottom: 10px;
 }
 
 .battle-menu {
@@ -265,7 +269,8 @@
   align-items: center;
   justify-content: space-around;
   flex-wrap: wrap;
-  width: 25vw;
+  width: 18vw;
+  height: 220px;
   gap: 10px;
   padding: 10px;
   border: thick double #161616;
@@ -282,7 +287,7 @@
   padding: 20px;
   background: white;
   border-radius: 10px;
-  width: 11vw;
+  width: 8vw;
 }
 
 .options:hover {
@@ -299,14 +304,15 @@
   justify-content: space-around;
   flex-wrap: wrap;
   gap: 10px;
-  width: 48vw;
-  min-height: 220px;
+  width: 38vw;
+  min-height: 240px;
+  height: 240px;
   padding: 10px;
   border: thick double #161616;
   border-radius: 10px;
   position: relative;
-  right: 65px;
-  bottom: 50px; 
+  right: 10px;
+  bottom: 120px; 
 }
 
 .moveset-2 { 
@@ -317,18 +323,23 @@
   justify-content: space-around;
   flex-wrap: wrap;
   gap: 10px;
-  width: 48vw;
-  min-height: 220px;
+  width: 38vw;
+  min-height: 240px;
+    
   padding: 10px;
   border: thick double #161616;
   border-radius: 10px;
   position: relative;
-  right: 60px;
-  bottom: 50px; 
+  right: 10px;
+  bottom: 120px; 
+}
+
+.pkmn-img {
+  width: 150px;
 }
 
 .pkmn-img-icon {
-  width: 25%;
+  width: 46px;
 }
 
 .moves {
@@ -388,7 +399,7 @@
   outline: 4px solid #525252;
   outline-offset: -8px;
   bottom: 95px;
-  left: 60px;
+  left: 0px;
 }
 
 .hp-bar-label {
@@ -407,7 +418,7 @@
 
 .hp-bar-fill {
   position: absolute;
-  left: 50px;
+  left: 49px;
   top: 5px;
   height: 9px;
   width: calc(120px * var(--hp, 1));
@@ -429,16 +440,16 @@
 
 .ui-1 {
   position: relative;
-  top: 90px;
-  left: 15px;
-  width: 30%;
+  bottom: 200px;
+  left: -50px;
+  width: 250px;
 }
 
 .ui-2 {
   position: relative;
-  bottom: 140px;
-  left: -45px;
-  width: 60%;
+  bottom: 135px;
+  left: -25px;
+  width: 250px;
 }
 
 #battle-message {
@@ -645,10 +656,9 @@
 
 @media (max-width: 600px) {              /* Portrait Mode */
   .popup-battle-pokemon {
-    min-width: 100vw !important;
     width: 100vw !important;
-    min-height: 85dvh !important;
-    height: 85dvh !important; 
+    min-height: 700px !important;
+    height: 700px !important; 
   }
   .battle-transition-overlay {
     min-width: 100vw !important;
@@ -674,14 +684,23 @@
     left: -12vw !important;
     top: -2dvh !important;
   }
+  .pokemon1 {
+    left: -230px !important;
+    top: 35px !important;    
+  }
+  .pokemon2 {
+    left: 200px !important;
+    top: 0px !important;
+  }
   .moveset {
     min-height: 200px !important;
+    height: 200px !important;
     right: 70px !important;
-    bottom: -20dvh !important;
+    bottom: -120px !important;
     gap: 5px !important;
   }
   .moves {
-    font-size: 15px !important;
+    font-size: 18px !important;
     padding: 15px !important;
     margin: 0 !important;
     height: 80px !important;
@@ -690,29 +709,34 @@
     min-height: 200px !important;
     height: 150px !important;
     right: 70px !important;
-    top: 20dvh !important;
+    bottom: -120px !important;
   }
   #battle-message {
-    font-size: 35px !important;
+    font-size: 30px !important;
     margin: 10px !important;
   }
   .battle-menu {
-    width: 90vw !important;
-    min-width: 90vw !important;
+    width: 55vw !important;
+    height: 180px !important;
     position: relative !important;
     gap: 5px !important;
-    right: 5px !important;
+    right: -5px !important;
     bottom: 5px !important;
   }
   .options {
-    font-size: 20px !important;
-    padding: 25px !important;
+    font-size: 18px !important;
+    padding: 0px !important;
     margin-top: 0 !important;
+    width: 90px !important;
+    height: 70px !important;
   }
   .pokemon2-stats, .pokemon1-stats {
     left: 0 !important;
     right: 0 !important;
     width: 50vw !important;
+  }
+  .pokemon1-stats {
+    left: -120px !important;
   }
   .pokeName-battle, .pokeName-battle-2 {
     font-size: 25px !important;
@@ -721,11 +745,11 @@
   }
   .pokeName-battle {
     top: 150px !important;
-    left: 120px !important;
+    left: 100px !important;
   }
   .pokeName-battle-2 {
     top: 50px !important;
-    right: 30px !important;
+    right: 25px !important;
   }
   .pokeText-battle, .pokeText-battle-2, .pokeText-battle-life {
     font-size: 18px !important;
@@ -735,7 +759,7 @@
   }
   .pokeText-battle {
     top: 140px !important;
-    left: 125px !important;
+    left: 115px !important;
   }
   .pokeText-battle-life {
     top: 105px !important;
@@ -763,21 +787,21 @@
   }
   .hp-bar-container {
     top: 120px !important;
-    left: 115px !important;
+    left: 150px !important;
   }
   .hp-bar-container-2 {
     top: 20px !important;
     left: 5px !important;
   }
   .ui-1 {
-    width: 60% !important;
-    top: 250px !important;
-    left: -80px !important;
+    width: 190px !important;
+    top: 80px !important;
+    left: 105px !important;
   }
   .ui-2 {
-    width: 100% !important;
+    width: 190px !important;
     top: -15px !important;
-    left: -10px !important;
+    left: -15px !important;
   }
   #pokemon-battle-sprite {
     width: 150px !important;
@@ -848,8 +872,8 @@
   .pokemon-h2, .pokemon-h2-2 {
     font-size: 35px !important;
   }
-  .pkmn-img {
-    width: 100px !important;
+  .pkmn-img-icon {
+    width: 45px !important;
   }
   .lose-icon-short, .win-icon-short {
     width: 20% !important;
@@ -864,34 +888,55 @@
 }
 
 @media (max-width: 600px) and (max-height: 800px) {              /* Portrait Mode small phones */
+  .popup-battle-pokemon {
+    min-height: 550px !important;
+    height: 550px !important; 
+  }
   .pokemon1-container {
     left: -16vw !important;
-    top: -20dvh !important;
+    top: -25dvh !important;
   }
   .pokemon2-container {
     left: -12vw !important;
     top: -5dvh !important;
   }
+  .pokemon1 {
+    left: -220px !important;
+  }
+  .pokemon2 {
+    left: 180px !important;
+  }
   .moveset {
-    min-height: 200px !important;
+    min-height: 150px !important;
+    height: 150px !important;
     right: 70px !important;
-    top: 10dvh !important;
+    top: 3dvh !important;
     gap: 5px !important;
   }
   .moves {
     font-size: 15px !important;
     padding: 15px !important;
     margin: 0 !important;
-    height: 80px !important;
+    height: 50px !important;
   }
   .moveset-2 {
-    min-height: 200px !important;
+    min-height: 150px !important;
     height: 150px !important;
     right: 70px !important;
-    top: 10dvh !important;
+    top: 3dvh !important;
   }
-  .ui-1 {
-    left: -72px !important;
+  .battle-menu{
+    height: 130px !important;
+  }
+  .options {
+    font-size: 15px !important;
+    padding: 0px !important;
+    margin-top: 0 !important;
+    width: 80px !important;
+    height: 50px !important;
+  }
+  .pkmn-img-icon {
+    width: 35px !important;
   }
 }
 

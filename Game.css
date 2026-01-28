@@ -513,6 +513,12 @@
     margin: 0 !important;
     padding: 0 !important;
   }
+
+  .empty-card {
+  width: 50px !important;
+  height: 50px !important;
+}
+
   .turn-indicator.left {
     grid-column: 1 !important;
     grid-row: 1 !important;
@@ -587,6 +593,7 @@
     min-width: unset !important;
     padding: 12px 8px !important;
     max-height: 75vh !important;
+    height: 70vh !important;
   }
   .pokeText {
     font-size: 1.4rem !important;

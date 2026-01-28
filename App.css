@@ -98,13 +98,6 @@ nav a {
   background-color: #a7652b;
 }
 
-.card-home {
-  width: 110px;
-  height: 110px;
-  cursor: pointer;
-  background-color: transparent;
-}
-
 .card-inner-home {
   position: relative;
   width: 100%;
@@ -414,10 +407,10 @@ p {
   padding: 12px 16px;
   position: absolute;
   z-index: 10;
-  bottom: 50%; 
-  right: 180px;
+  top: 375px;
+  left: 77vw;
   box-shadow: 0 4px 16px #0006;
-  font-size: 1rem;
+  font-size: 1em;
 }
 
 button {
@@ -721,20 +714,23 @@ footer a {
     left: 0 !important;
   }
   .pokedex {
-    position: relative !important;
-    top: -105px !important;
-    left: 25vw !important;
+    top: 770px !important;
+    left: 65vw !important;
     width: 60px !important;
     max-width: 50% !important;
     height: auto !important;
   }
   .pokedex-gif {
-    position: relative !important;
-    top: -120px !important;
-    left: 23vw !important;
-    width: 130px !important;
-    max-width: 50% !important;
+    top: 740px !important;
+    left: 52vw !important;
+    width: 160px !important;
+    max-width: 200% !important;
     height: auto !important;
+  }
+  .pokedex-text {
+    top: 720px !important;
+    left: 50vw !important;
+    font-size: 0.65em !important;
   }
   .figuras {
     font-size: 2.6rem;
@@ -742,10 +738,14 @@ footer a {
   .card-home-wrapper {
     position: relative;
     left: -15vw;
-    top: 20px;
+    top: 0px;
     margin-right: 50px;
-    margin-bottom: 40px;
+    margin-bottom: 50px;
     margin-top: 50px;
+  }
+  .card-home {
+    width: 80px !important;
+    height: 80px !important;
   }
   .card-home-wrapper .card {
     width: 80px !important;

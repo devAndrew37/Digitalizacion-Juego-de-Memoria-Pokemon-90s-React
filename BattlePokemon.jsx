@@ -987,8 +987,8 @@ useEffect(() => {
             />
           </div>
           <h3 className="pokeText-battle-life">{hp1} /<span className="pokeText-battle-life-span">{maxHp1}</span></h3>
+          <img src="assets/PL_UI.png" alt="" className="ui-1" />
         </div>
-        <img src="assets/PL_UI.png" alt="" className="ui-1" />
         </div>
         {messageFlag && <div className="moveset-2">
           <p id="battle-message">
